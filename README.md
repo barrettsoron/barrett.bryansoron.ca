@@ -1,43 +1,28 @@
-# Astro Starter Kit: Minimal
+# barrett.bryansoron.ca
+
+Notes, essays, and working documents on durable political infrastructure and technology held to human terms.
+
+Static [Astro](https://astro.build/) build. Deployed to GitHub Pages from `main`. No analytics, no trackers, no cookies.
+
+## Local dev
 
 ```sh
-npm create astro@latest -- --template minimal
+npm install
+npm run dev    # http://localhost:4321
+npm run build  # → dist/
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Contact
 
-## 🚀 Project Structure
+[barrett@bryansoron.ca](mailto:barrett@bryansoron.ca) · [Bluesky](https://bsky.app/profile/mbbsoron.bsky.social) · [LinkedIn](https://www.linkedin.com/in/mbbsoron/) · [GitHub](https://github.com/barrettsoron)
 
-Inside of your Astro project, you'll see the following folders and files:
+## Fonts
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **[BC Sans](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/bc-visual-identity/bc-sans)** — [OGL-BC 2.0](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc). A typeface released by the Government of British Columbia with full support for Canadian Indigenous-language Unicode ranges. Using it is a small, place-based commitment to legible Indigenous-language typography as a default, not an afterthought.
+- **Noto Serif** and **Noto Sans Mono** — [SIL OFL 1.1](https://openfontlicense.org/). From Google's Noto project, which aims to render every language in Unicode ("no tofu"). Open-licensed, well-drawn, script-complete by default.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## License
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Code: [MIT](LICENSE) — reuse freely, keep the attribution notice.
+- Writing (essays, notes, pages): [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) — credit, share-alike.
+- Fonts: their own licenses, listed above.
