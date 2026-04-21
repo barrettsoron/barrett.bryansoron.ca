@@ -351,22 +351,11 @@ footer {
 	font-size: 0.9375rem;
 }
 
-.footer-heading {
-	font-size: 0.9375rem;
-	text-transform: uppercase;
-	letter-spacing: 0.12em;
-	color: var(--accent);
-	margin: 0 0 0.875rem;
-	font-weight: 700;
-}
-
-.footer-blurb {
+.footer-contact {
 	color: var(--text);
-	margin: 0 0 1rem;
+	margin: 0 0 2.5rem;
 	max-width: 32rem;
 }
-
-.footer-links { margin: 0 0 2.5rem; }
 
 .footer-land {
 	margin: 0 0 1.25rem;
