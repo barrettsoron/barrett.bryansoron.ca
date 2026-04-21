@@ -4,13 +4,17 @@ import '../styles/global.css';
 interface Props {
 	title?: string;
 	description?: string;
+	image?: string;
 }
 
-const { title, description } = Astro.props;
 const siteTitle = 'Barrett Bryan-Soron';
+const defaultDescription = 'Political operator in Vancouver. Building durable infrastructure for eco-socialist movement and party work in Canada. Writing about craft, technology, and the harder work the left has to do now.';
+const { title, description = defaultDescription, image = '/og-default.png' } = Astro.props;
 const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
 const isDev = import.meta.env.DEV;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const ogImageUrl = new URL(image, Astro.site).toString();
 ---
 
 <!doctype html>
@@ -19,13 +23,27 @@ const isDev = import.meta.env.DEV;
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="/favicon.ico" sizes="any" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<link rel="canonical" href={canonicalUrl} />
 		<link rel="preload" href="/fonts/bc-sans/BCSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/fonts/bc-sans/BCSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="/fonts/noto-serif/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
 		<meta name="generator" content={Astro.generator} />
 		<title>{fullTitle}</title>
-		{description && <meta name="description" content={description} />}
+		<meta name="description" content={description} />
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={siteTitle} />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={fullTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImageUrl} />
 	</head>
 	<body>
 		<a href="#main" class="skip-link">Skip to content</a>
