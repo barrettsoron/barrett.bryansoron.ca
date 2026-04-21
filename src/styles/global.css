@@ -1,0 +1,644 @@
+/* ---------- Fonts ---------- */
+
+@font-face {
+	font-family: "BC Sans";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/bc-sans/BCSans-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "BC Sans";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/bc-sans/BCSans-Italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "BC Sans";
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url("/fonts/bc-sans/BCSans-Bold.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/noto-serif/noto-serif-v33-latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Noto Serif";
+	font-style: italic;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/noto-serif/noto-serif-v33-latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Noto Sans Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/fonts/noto-mono/noto-sans-mono-v37-latin-regular.woff2") format("woff2");
+}
+
+/* ---------- Tokens ---------- */
+
+:root {
+	--bg: #0b0b0d;
+	--surface: #121216;
+	--text: #ededed;
+	--muted: #8a8a92;
+	--border: #24242a;
+	--accent: #10b981;
+	--accent-dim: #0a8d65;
+
+	--font-sans: "BC Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	--font-serif: "Noto Serif", Georgia, "Times New Roman", serif;
+	--font-mono: "Noto Sans Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+	--measure: 36rem;
+}
+
+/* Accent story: Viridian — committed 2026-04-21. Vivid progressive-left green.
+   The accent and accent-dim values live in :root above. */
+
+/* ---------- Base ---------- */
+
+* { box-sizing: border-box; }
+
+html {
+	font-family: var(--font-sans);
+	font-size: 17px;
+	line-height: 1.7;
+	background: var(--bg);
+	color: var(--text);
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+	margin: 0 auto;
+	padding: 3rem 1.5rem 6rem;
+	max-width: var(--measure);
+}
+
+::selection {
+	background: var(--accent);
+	color: var(--bg);
+}
+
+/* ---------- Skip link ---------- */
+
+.skip-link {
+	position: absolute;
+	left: 0.5rem;
+	top: 0.5rem;
+	background: var(--accent);
+	color: var(--bg);
+	padding: 0.5rem 0.75rem;
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: 2px;
+	transform: translateY(-200%);
+	transition: transform 0.15s ease;
+	z-index: 10;
+}
+
+.skip-link:focus {
+	transform: translateY(0);
+}
+
+/* ---------- Focus ---------- */
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 3px;
+	border-radius: 2px;
+}
+
+/* ---------- Header ---------- */
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1.5rem;
+	margin-bottom: 4rem;
+	flex-wrap: wrap;
+}
+
+header .site {
+	color: var(--accent);
+	font-weight: 700;
+	font-size: 1.0625rem;
+	letter-spacing: -0.01em;
+	text-decoration: none;
+	border-bottom: none;
+}
+
+header .site:hover {
+	color: var(--text);
+}
+
+nav {
+	display: flex;
+	gap: 1.5rem;
+	font-size: 0.9375rem;
+}
+
+nav a {
+	color: var(--muted);
+	text-decoration: none;
+	border-bottom: none;
+	padding: 0.5rem 0;
+	min-height: 44px;
+	display: inline-flex;
+	align-items: center;
+}
+
+nav a:hover {
+	color: var(--text);
+}
+
+nav a[aria-current="page"] {
+	color: var(--accent);
+}
+
+nav a.nav-dev {
+	color: var(--accent-dim);
+	font-style: italic;
+	font-size: 0.8125rem;
+}
+
+nav a.nav-dev::before {
+	content: "· ";
+	font-style: normal;
+	color: var(--border);
+}
+
+nav a.nav-dev:hover {
+	color: var(--accent);
+}
+
+/* ---------- Main ---------- */
+
+main { min-height: 60vh; }
+
+/* ---------- Links ---------- */
+
+a {
+	color: var(--text);
+	text-decoration: underline;
+	text-decoration-color: var(--accent-dim);
+	text-decoration-thickness: 2px;
+	text-underline-offset: 0.22em;
+	transition: text-decoration-color 0.15s ease, color 0.15s ease;
+}
+
+a:hover {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+/* ---------- Headings ---------- */
+
+h1, h2, h3, h4 {
+	color: var(--text);
+	font-weight: 700;
+	line-height: 1.25;
+	letter-spacing: -0.02em;
+	margin: 2.75rem 0 1rem;
+}
+
+h1 { font-size: 1.75rem; letter-spacing: -0.025em; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.0625rem; letter-spacing: -0.01em; }
+h4 { font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); }
+
+/* ---------- Prose ---------- */
+
+p { margin: 0 0 1.25rem; }
+
+ul, ol { padding-left: 1.25rem; margin: 0 0 1.25rem; }
+li { margin: 0.25rem 0; }
+
+ol li::marker { color: var(--accent-dim); }
+
+/* Jumped-to headings from TOC links: quiet "you are here" signal */
+article h1:target,
+article h2:target,
+article h3:target,
+article h4:target { color: var(--accent); }
+
+strong { font-weight: 700; color: var(--text); }
+em { font-style: italic; }
+
+blockquote {
+	margin: 1.75rem 0;
+	padding: 0.25rem 0 0.25rem 1.25rem;
+	border-left: 2px solid var(--accent-dim);
+	color: var(--muted);
+	font-style: italic;
+}
+
+blockquote p:last-child { margin-bottom: 0; }
+
+/* Folio mark hr */
+
+hr {
+	border: 0;
+	text-align: center;
+	margin: 3rem 0;
+	height: 1rem;
+	line-height: 1rem;
+}
+
+hr::before {
+	content: "§";
+	color: var(--accent);
+	font-family: var(--font-serif);
+	font-size: 1.125rem;
+	letter-spacing: 0.5em;
+}
+
+/* ---------- Code ---------- */
+
+code, kbd, pre, time {
+	font-family: var(--font-mono);
+	font-feature-settings: "tnum" 1;
+}
+
+code {
+	font-size: 0.875em;
+	background: var(--surface);
+	padding: 0.1em 0.4em;
+	border-radius: 3px;
+	color: var(--text);
+}
+
+pre {
+	background: var(--surface);
+	padding: 1rem 1.125rem;
+	margin: 1.5rem 0;
+	overflow-x: auto;
+	border-radius: 4px;
+	font-size: 0.8125rem;
+	line-height: 1.6;
+	border: 1px solid var(--border);
+}
+
+pre code {
+	background: transparent;
+	padding: 0;
+	font-size: inherit;
+}
+
+kbd {
+	font-size: 0.75em;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-bottom-width: 2px;
+	border-radius: 3px;
+	padding: 0.1em 0.4em;
+	color: var(--text);
+}
+
+mark {
+	background: var(--accent-dim);
+	color: var(--text);
+	padding: 0.05em 0.25em;
+	border-radius: 2px;
+}
+
+/* ---------- Tables ---------- */
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1.75rem 0;
+	font-size: 0.9375rem;
+}
+
+th, td {
+	padding: 0.625rem 0.75rem;
+	text-align: left;
+	border-bottom: 1px solid var(--border);
+	vertical-align: top;
+}
+
+th {
+	color: var(--muted);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	font-size: 0.75rem;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+	margin-top: 6rem;
+	padding-top: 2.5rem;
+	border-top: 1px solid var(--border);
+	color: var(--text);
+	font-size: 0.9375rem;
+}
+
+.footer-heading {
+	font-size: 0.9375rem;
+	text-transform: uppercase;
+	letter-spacing: 0.12em;
+	color: var(--accent);
+	margin: 0 0 0.875rem;
+	font-weight: 700;
+}
+
+.footer-blurb {
+	color: var(--text);
+	margin: 0 0 1rem;
+	max-width: 32rem;
+}
+
+.footer-links { margin: 0 0 2.5rem; }
+
+.footer-land {
+	margin: 0 0 1.25rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--border);
+	color: var(--muted);
+	font-size: 0.8125rem;
+	line-height: 1.65;
+	max-width: 32rem;
+}
+
+.footer-copyright {
+	margin: 0;
+	color: var(--muted);
+	font-size: 0.8125rem;
+	font-family: var(--font-mono);
+	letter-spacing: -0.01em;
+}
+
+/* ---------- Post list ---------- */
+
+.posts {
+	list-style: none;
+	padding: 0;
+	margin: 2rem 0;
+}
+
+.posts li {
+	display: flex;
+	gap: 1.25rem;
+	align-items: baseline;
+	padding: 0.625rem 0;
+	border-bottom: 1px solid var(--border);
+	position: relative;
+}
+
+.posts time {
+	color: var(--accent-dim);
+	font-size: 0.8125rem;
+	flex-shrink: 0;
+	min-width: 5.25rem;
+	letter-spacing: -0.02em;
+}
+
+.posts a {
+	text-decoration: none;
+	color: var(--text);
+}
+
+.posts a:hover {
+	color: var(--accent);
+	text-decoration: underline;
+	text-decoration-color: var(--accent);
+	text-underline-offset: 0.22em;
+}
+
+/* Hanging dates on wide viewports */
+
+@media (min-width: 1000px) {
+	.posts--hanging .posts,
+	.posts.posts--hanging {
+		padding-left: 0;
+	}
+	.posts--hanging li,
+	.posts.posts--hanging li {
+		display: block;
+		padding-left: 0;
+	}
+	.posts--hanging time,
+	.posts.posts--hanging time {
+		position: absolute;
+		left: -7rem;
+		top: 0.625rem;
+		width: 6rem;
+		text-align: right;
+		min-width: 0;
+	}
+}
+
+/* ---------- Post meta ---------- */
+
+.post-meta {
+	color: var(--muted);
+	font-size: 0.8125rem;
+	margin-bottom: 2rem;
+	font-family: var(--font-mono);
+	letter-spacing: -0.01em;
+}
+
+.post-meta time { color: var(--accent-dim); }
+
+/* ---------- TOC (editorial colophon) ---------- */
+
+.toc {
+	margin: 2.75rem 0 3.5rem;
+	padding: 0 0 1rem;
+	border-bottom: 1px solid var(--accent-dim);
+	font-size: 0.9375rem;
+	position: relative;
+}
+
+.toc-label {
+	display: flex;
+	align-items: center;
+	gap: 0.875rem;
+	margin: 0 0 0.75rem;
+	padding: 0;
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 1.45;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: var(--accent);
+}
+
+.toc-label::after {
+	content: "";
+	flex: 1;
+	height: 1px;
+	background: var(--accent-dim);
+	align-self: center;
+}
+
+.toc-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.toc-item {
+	margin: 0;
+	line-height: 1.45;
+}
+
+.toc-item a {
+	display: block;
+	padding: 0.3rem 0;
+	color: var(--text);
+	text-decoration: none;
+	transition: color 0.15s ease;
+}
+
+.toc-item a:hover { color: var(--accent); }
+
+.toc-item--sub {
+	position: relative;
+	padding-left: 1.5rem;
+	font-style: italic;
+}
+
+.toc-item--sub::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0.95rem;
+	width: 0.75rem;
+	height: 1px;
+	background: var(--accent-dim);
+}
+
+.toc-item--sub a {
+	color: var(--muted);
+}
+
+.toc-item--sub a:hover { color: var(--accent); }
+
+/* Hanging folio label on wide viewports — echoes .posts--hanging */
+@media (min-width: 1100px) {
+	.toc {
+		padding-top: 1rem;
+		border-top: 1px solid var(--accent-dim);
+	}
+	.toc-label {
+		position: absolute;
+		left: -8rem;
+		top: 1.3rem;
+		width: 6.5rem;
+		margin: 0;
+		display: block;
+		text-align: right;
+	}
+	.toc-label::after { display: none; }
+	.toc-list { margin-top: 0; }
+}
+
+article h2, article h3 { scroll-margin-top: 1.5rem; }
+
+/* ---------- Essay body: Noto Serif ---------- */
+
+.essay-body {
+	font-family: var(--font-serif);
+	font-size: 1.0625rem;
+	line-height: 1.75;
+}
+
+.essay-body h1, .essay-body h2, .essay-body h3, .essay-body h4 {
+	font-family: var(--font-sans);
+}
+
+.essay-body blockquote {
+	font-family: var(--font-serif);
+	font-size: 1.0625rem;
+}
+
+.essay-body code, .essay-body pre, .essay-body kbd {
+	font-family: var(--font-mono);
+}
+
+/* ---------- Admonitions (editorial chapter-opener — coloured top rule) ---------- */
+
+.admonition {
+	margin: 2.25rem 0;
+	padding-top: 0.75rem;
+	border-top: 2px solid var(--border);
+	font-size: 0.9375rem;
+	font-family: var(--font-sans);
+}
+
+.admonition-label {
+	display: block;
+	margin: 0 0 0.45rem;
+	font-family: var(--font-mono);
+	font-size: 0.6875rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.18em;
+	color: var(--muted);
+}
+
+.admonition p:last-child { margin-bottom: 0; }
+
+.admonition.note { border-top-color: #5a8bd6; }
+.admonition.note .admonition-label { color: #8ab2ea; }
+
+.admonition.tip { border-top-color: #6aab6a; }
+.admonition.tip .admonition-label { color: #8ccf8c; }
+
+.admonition.caveat { border-top-color: var(--accent); }
+.admonition.caveat .admonition-label { color: var(--accent); }
+
+/* ---------- Callout ---------- */
+
+.callout {
+	margin: 2.5rem 0;
+	padding: 1.75rem 1.5rem;
+	border-top: 1px solid var(--accent-dim);
+	border-bottom: 1px solid var(--accent-dim);
+	text-align: center;
+	font-size: 1.0625rem;
+	font-family: var(--font-serif);
+	font-style: italic;
+	color: var(--text);
+}
+
+.callout p { margin: 0; }
+
+/* ---------- Reduced motion ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after {
+		transition-duration: 0.01ms !important;
+		animation-duration: 0.01ms !important;
+	}
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+	html { font-size: 12pt; background: white; color: black; }
+	header nav, footer, .skip-link, .toc { display: none; }
+	a { color: black; text-decoration: underline; }
+	.admonition { border: 1px solid #999; background: none; }
+	hr::before { color: black; }
+}

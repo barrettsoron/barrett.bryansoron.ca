@@ -1,0 +1,160 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Style guide" description="Theme showcase — typography, elements, admonitions.">
+	<article>
+		<h1>Style guide</h1>
+		<p class="post-meta">A reference page showing every element this theme styles.</p>
+
+		<p>
+			This page demonstrates the typography, prose elements, lists, code, tables, and custom admonitions used throughout the site. If it looks right here, it should look right everywhere.
+		</p>
+
+		<h2 id="typography">Typography</h2>
+
+		<p>
+			Body copy is set in the system font stack at 1rem with a 1.6 line-height. The measure is capped at ~38rem to keep lines readable. <strong>Bold</strong> and <em>italic</em> work as expected. <a href="#">Links carry a subtle underline</a> that brightens on hover. You can also <mark>highlight text</mark> when needed, or reference keys like <kbd>⌘</kbd> <kbd>K</kbd>.
+		</p>
+
+		<h3 id="headings">Heading scale</h3>
+
+		<h1>Heading level 1</h1>
+		<h2>Heading level 2</h2>
+		<h3>Heading level 3</h3>
+
+		<h2 id="lists">Lists</h2>
+
+		<p>Unordered:</p>
+
+		<ul>
+			<li>First item with a bit of body text to see line-height</li>
+			<li>Second item, shorter</li>
+			<li>
+				Nested:
+				<ul>
+					<li>Nested one</li>
+					<li>Nested two</li>
+				</ul>
+			</li>
+		</ul>
+
+		<p>Ordered:</p>
+
+		<ol>
+			<li>One thing</li>
+			<li>Another thing</li>
+			<li>A third</li>
+		</ol>
+
+		<h2 id="blockquote">Blockquote</h2>
+
+		<blockquote>
+			<p>
+				A book is a machine for thinking. A website is a garden you prune in public. Neither finishes.
+			</p>
+		</blockquote>
+
+		<h2 id="code">Code</h2>
+
+		<p>
+			Inline code like <code>getCollection('essays')</code> sits in a slightly darker chip. Block code uses the same palette with padding and horizontal scroll when it overflows.
+		</p>
+
+		<pre><code>{`// src/content.config.ts
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+const essays = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/essays' }),
+});
+
+export const collections = { essays };`}</code></pre>
+
+		<h2 id="table">Table</h2>
+
+		<table>
+			<thead>
+				<tr>
+					<th>Section</th>
+					<th>Path</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>Essays</td><td>/essays</td><td>Launched</td></tr>
+				<tr><td>Notes</td><td>/notes</td><td>Launched</td></tr>
+				<tr><td>Newsletter</td><td>/newsletter</td><td>Roadmap</td></tr>
+				<tr><td>Uses</td><td>/uses</td><td>Roadmap</td></tr>
+			</tbody>
+		</table>
+
+		<h2 id="admonitions">Admonitions</h2>
+
+		<p>Three types, used sparingly. The semantic colour lives on the full-width top rule; the label carries the same colour, lighter. For quotations, use <code>&lt;blockquote&gt;</code> inline or the centred <code>.callout</code> block — not an admonition.</p>
+
+		<aside class="admonition note">
+			<span class="admonition-label">Note</span>
+			<p>This is a neutral aside. Use it for sidebar context that isn't strictly part of the argument but rewards the reader who stops to look.</p>
+		</aside>
+
+		<aside class="admonition tip">
+			<span class="admonition-label">Tip</span>
+			<p>Use tips for practical, actionable suggestions. Keep them short — if it needs a paragraph, it belongs in the body.</p>
+		</aside>
+
+		<aside class="admonition caveat">
+			<span class="admonition-label">Caveat</span>
+			<p>Use caveats to flag something the reader should hold loosely — a claim that's half-formed, a tool that might not fit every case, a scope limit on the argument.</p>
+		</aside>
+
+		<h2 id="callout">Callout</h2>
+
+		<p>A centered, bordered callout for a single sentence worth pausing on.</p>
+
+		<div class="callout">
+			<p>Publish what you can maintain. Delete the rest.</p>
+		</div>
+
+		<h2 id="post-list">Post list (.posts)</h2>
+
+		<p>The listing component used on <a href="/essays">/essays</a> and <a href="/notes">/notes</a>:</p>
+
+		<ul class="posts">
+			<li>
+				<time datetime="2026-04-12">2026-04-12</time>
+				<a href="/essays/on-deliberate-practice">On deliberate practice</a>
+			</li>
+			<li>
+				<time datetime="2026-03-28">2026-03-28</time>
+				<a href="/essays/the-shape-of-attention">The shape of attention</a>
+			</li>
+			<li>
+				<time datetime="2026-02-14">2026-02-14</time>
+				<a href="/essays/notes-on-writing-in-public">Notes on writing in public</a>
+			</li>
+		</ul>
+
+		<h2 id="toc">Table of contents</h2>
+
+		<p>Used on essay pages when a post has two or more headings. Built from <code>headings[]</code> at build time, zero JavaScript. H2 items sit flush-left; H3 items hang italic-muted from a short em-rule prefix. On wide viewports (≥1100px), the <code>CONTENTS</code> label floats into the left margin as a hanging folio:</p>
+
+		<nav class="toc" aria-label="Example table of contents">
+			<p class="toc-label">Contents</p>
+			<ol class="toc-list">
+				<li class="toc-item"><a href="#typography">Typography</a></li>
+				<li class="toc-item toc-item--sub"><a href="#headings">Heading scale</a></li>
+				<li class="toc-item"><a href="#lists">Lists</a></li>
+				<li class="toc-item"><a href="#blockquote">Blockquote</a></li>
+				<li class="toc-item"><a href="#code">Code</a></li>
+				<li class="toc-item"><a href="#table">Table</a></li>
+				<li class="toc-item"><a href="#admonitions">Admonitions</a></li>
+				<li class="toc-item"><a href="#callout">Callout</a></li>
+			</ol>
+		</nav>
+
+		<hr />
+
+		<p class="post-meta">End of style guide.</p>
+	</article>
+</Base>

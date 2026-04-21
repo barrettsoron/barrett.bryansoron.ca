@@ -1,0 +1,61 @@
+---
+import '../styles/global.css';
+
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const { title, description } = Astro.props;
+const siteTitle = 'Barrett Bryan-Soron';
+const fullTitle = title ? `${title} — ${siteTitle}` : siteTitle;
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isDev = import.meta.env.DEV;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="preload" href="/fonts/bc-sans/BCSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/bc-sans/BCSans-Bold.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/noto-serif/noto-serif-v33-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+		<meta name="generator" content={Astro.generator} />
+		<title>{fullTitle}</title>
+		{description && <meta name="description" content={description} />}
+	</head>
+	<body>
+		<a href="#main" class="skip-link">Skip to content</a>
+		<header>
+			<a class="site" href="/">Barrett Bryan-Soron</a>
+			<nav>
+				<a href="/essays" aria-current={pathname.startsWith('/essays') ? 'page' : undefined}>Essays</a>
+				<a href="/notes" aria-current={pathname.startsWith('/notes') ? 'page' : undefined}>Notes</a>
+				<a href="/now" aria-current={pathname === '/now' ? 'page' : undefined}>Now</a>
+				<a href="/about" aria-current={pathname === '/about' ? 'page' : undefined}>About</a>
+				{isDev && (
+					<a href="/styleguide" class="nav-dev" aria-current={pathname === '/styleguide' ? 'page' : undefined}>Styleguide</a>
+				)}
+			</nav>
+		</header>
+		<main id="main">
+			<slot />
+		</main>
+		<footer>
+			<h2 class="footer-heading">Let's Connect</h2>
+			<p class="footer-blurb">
+				If you want to get in touch about something, or just to say hi, send me an email.
+			</p>
+			<p class="footer-links">
+				<a href="mailto:barrett@bryansoron.ca">barrett@bryansoron.ca</a>
+			</p>
+			<p class="footer-land">
+				Written from the unceded ancestral territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaʔɬ (Tsleil-Waututh) Nations.
+			</p>
+			<p class="footer-copyright">&copy; {new Date().getFullYear()} · (Mike) Barrett Bryan-Soron</p>
+		</footer>
+	</body>
+</html>

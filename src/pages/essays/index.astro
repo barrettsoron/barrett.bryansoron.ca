@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+const isProd = import.meta.env.PROD;
+const essays = (
+	await getCollection('essays', ({ data }) => !isProd || !data.draft)
+).sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const fmt = (d: Date) => d.toISOString().slice(0, 10);
+---
+
+<Base title="Essays" description="Essays by Barrett Bryan-Soron.">
+	<h1>Essays</h1>
+	{essays.length === 0 ? (
+		<p>No essays yet.</p>
+	) : (
+		<ul class="posts posts--hanging">
+			{essays.map((e) => (
+				<li>
+					<time datetime={fmt(e.data.date)}>{fmt(e.data.date)}</time>
+					<a href={`/essays/${e.id}`}>{e.data.title}</a>
+				</li>
+			))}
+		</ul>
+	)}
+</Base>
