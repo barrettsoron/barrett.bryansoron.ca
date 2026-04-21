@@ -1,17 +1,51 @@
 ---
+import Base from '../layouts/Base.astro';
+import { getCollection } from 'astro:content';
 
+const isProd = import.meta.env.PROD;
+const published = ({ data }: { data: { draft: boolean } }) => !isProd || !data.draft;
+
+const essays = (await getCollection('essays', published)).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+).slice(0, 5);
+
+const notes = (await getCollection('notes', published)).sort(
+	(a, b) => b.data.date.getTime() - a.data.date.getTime(),
+).slice(0, 5);
+
+const fmt = (d: Date) => d.toISOString().slice(0, 10);
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base description="Barrett Bryan-Soron — political operations and infrastructure for eco-socialist movement and party work in Canada.">
+	<p><strong>Barrett Bryan-Soron.</strong> Political operations and infrastructure for eco-socialist movement and party work in Canada. Long-time campaign director for Avi Lewis. Ran operations for the 2025–2026 NDP leadership campaign — a first-ballot victory with 56% of the vote; closing the campaign out through September 2026.</p>
+
+	<p>Writing here, slowly, about durable political infrastructure, technology held to human terms, and the line-drawing craft both require in a techno-feudal moment.</p>
+
+	{essays.length > 0 && (
+		<>
+			<h2>Recent essays</h2>
+			<ul class="posts">
+				{essays.map((e) => (
+					<li>
+						<time datetime={fmt(e.data.date)}>{fmt(e.data.date)}</time>
+						<a href={`/essays/${e.id}`}>{e.data.title}</a>
+					</li>
+				))}
+			</ul>
+		</>
+	)}
+
+	{notes.length > 0 && (
+		<>
+			<h2>Recent notes</h2>
+			<ul class="posts">
+				{notes.map((n) => (
+					<li>
+						<time datetime={fmt(n.data.date)}>{fmt(n.data.date)}</time>
+						<a href={`/notes/${n.id}`}>{n.data.title}</a>
+					</li>
+				))}
+			</ul>
+		</>
+	)}
+</Base>
