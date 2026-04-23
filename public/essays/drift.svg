@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="drift-title drift-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-width:600px;margin:2.5rem auto">
+	<title id="drift-title">Platform drift — September 2025 through March 2026</title>
+	<desc id="drift-desc">A timeline of generative-AI features that shipped into four tools (Canva, Zoom, Asana, Google Workspace) during the Avi Lewis leadership campaign, plus the Otter.ai class action filed just before the window opens. Dots mark discrete platform events; the Google row shows an ambient band representing gradual default rollout of Gemini across Workspace.</desc>
+
+	<defs>
+		<linearGradient id="drift-ambient" x1="0" y1="0" x2="1" y2="0">
+			<stop offset="0%" stop-color="#10b981" stop-opacity="0.10"/>
+			<stop offset="100%" stop-color="#10b981" stop-opacity="0.26"/>
+		</linearGradient>
+	</defs>
+
+	<!-- Header -->
+	<text x="14" y="28" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="11" fill="#10b981" font-weight="700" letter-spacing="2">PLATFORM DRIFT</text>
+	<text x="586" y="28" text-anchor="end" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">sept 2025 → mar 2026</text>
+
+	<!-- Otter.ai context banner -->
+	<line x1="14" y1="48" x2="586" y2="48" stroke="#24242a" stroke-width="1"/>
+	<text x="14" y="68" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="9.5" fill="#8a8a92" letter-spacing="1.5" font-weight="700">AUG 15, 2025  ·  PRE-WINDOW</text>
+	<text x="14" y="86" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#ededed">Otter.ai class action filed (Brewer v. Otter) — Notetaker auto-joined meetings without consent.</text>
+	<line x1="14" y1="102" x2="586" y2="102" stroke="#24242a" stroke-width="1"/>
+
+	<!-- Month axis labels -->
+	<text x="125" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">SEP</text>
+	<text x="195" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">OCT</text>
+	<text x="265" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">NOV</text>
+	<text x="335" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">DEC</text>
+	<text x="405" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">JAN</text>
+	<text x="475" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">FEB</text>
+	<text x="545" y="122" text-anchor="middle" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">MAR</text>
+
+	<!-- Grid row separators -->
+	<line x1="14" y1="132" x2="586" y2="132" stroke="#24242a" stroke-width="1"/>
+	<line x1="14" y1="172" x2="586" y2="172" stroke="#24242a" stroke-width="1"/>
+	<line x1="14" y1="212" x2="586" y2="212" stroke="#24242a" stroke-width="1"/>
+	<line x1="14" y1="252" x2="586" y2="252" stroke="#24242a" stroke-width="1"/>
+	<line x1="14" y1="302" x2="586" y2="302" stroke="#24242a" stroke-width="1"/>
+
+	<!-- Month column hairlines (very subtle) -->
+	<line x1="90" y1="132" x2="90" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="160" y1="132" x2="160" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="230" y1="132" x2="230" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="300" y1="132" x2="300" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="370" y1="132" x2="370" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="440" y1="132" x2="440" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="510" y1="132" x2="510" y2="302" stroke="#1a1a20" stroke-width="1"/>
+	<line x1="580" y1="132" x2="580" y2="302" stroke="#1a1a20" stroke-width="1"/>
+
+	<!-- Platform labels -->
+	<text x="82" y="156" text-anchor="end" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Canva</text>
+	<text x="82" y="196" text-anchor="end" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Zoom</text>
+	<text x="82" y="236" text-anchor="end" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Asana</text>
+	<text x="82" y="281" text-anchor="end" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Google</text>
+
+	<!-- Canva row events -->
+	<circle cx="108" cy="152" r="4" fill="#10b981"/>
+	<text x="118" y="156" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Nano Banana rollout</text>
+
+	<circle cx="265" cy="152" r="4" fill="#10b981"/>
+	<text x="275" y="156" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Nano Banana Pro</text>
+
+	<!-- Zoom row events -->
+	<circle cx="132" cy="192" r="4" fill="#10b981"/>
+	<text x="142" y="196" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Companion announced</text>
+
+	<circle cx="335" cy="192" r="4" fill="#10b981"/>
+	<text x="345" y="196" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Companion GA</text>
+
+	<!-- Asana row events -->
+	<circle cx="152" cy="232" r="4" fill="#10b981"/>
+	<text x="162" y="236" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Teammates beta</text>
+
+	<circle cx="285" cy="232" r="4" fill="#10b981"/>
+	<text x="295" y="236" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Fall release</text>
+
+	<circle cx="475" cy="232" r="4" fill="#10b981"/>
+	<text x="485" y="236" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Winter release</text>
+
+	<!-- Google row: ambient band -->
+	<rect x="90" y="264" width="490" height="26" fill="url(#drift-ambient)"/>
+	<text x="335" y="281" text-anchor="middle" font-family="'BC Sans', -apple-system, sans-serif" font-size="11" font-weight="700" fill="#ededed" letter-spacing="1.5">GRADUAL GEMINI DEFAULT ROLLOUT</text>
+
+	<!-- Footer caption -->
+	<text x="14" y="334" font-family="'Noto Serif', Georgia, serif" font-size="12" font-style="italic" fill="#8a8a92">Drift by defaults, drip by drip — the stack we'd started with became something else.</text>
+</svg>
