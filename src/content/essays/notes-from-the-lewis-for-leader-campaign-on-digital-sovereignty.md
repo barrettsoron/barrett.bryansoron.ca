@@ -23,7 +23,7 @@ From day one, our creative director had been holding a clear line: if we're shar
 
 Moments like that ran parallel to the main work we were doing, as we tried to manage the AI slop that big tech was forcing on everyone. Usually we caught them early, deactivated the new "feature" where we could. Sometimes, like this one, we only caught them after — and sent the apology alongside the originals as quickly as we could. The labour of noticing these changes, before or after, was its own burden.
 
-## Vantage: seven months, four roles
+## Vantage: seven months, three roles
 
 A word about my own vantage point before the rest of this piece makes sense. The campaign ran seven months, September 2025 through late March 2026. For the first couple months, I was an interim campaign manager, doing the job until we connected with the extraordinary [Savhanna Wilson](https://youtu.be/KXLN47bVxis?si=yOtxFRW4kfoQboWw&t=83). I moved to a dual operations and communications director role, until we found a permanent communications director in [Donya Ziaee](https://www.ndp.ca/news/ndp-leader-avi-lewis-announces-details-senior-team) — who's brought her skill and relationships into that same role in the new leader's office. I moved into a much-needed full operations role and currently continue in that role, closing out the campaign and meeting our compliance obligations with Elections Canada. The people designing and maintaining the tech stack were also the people running the campaign, and there were rarely enough of them.
 
