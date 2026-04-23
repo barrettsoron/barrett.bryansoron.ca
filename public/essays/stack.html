@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The stack we ran on — Barrett Bryan-Soron</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<style>
+@font-face { font-family: "BC Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/bc-sans/BCSans-Regular.woff2") format("woff2"); }
+@font-face { font-family: "BC Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("/fonts/bc-sans/BCSans-Bold.woff2") format("woff2"); }
+@font-face { font-family: "Noto Serif"; font-style: italic; font-weight: 400; font-display: swap; src: url("/fonts/noto-serif/noto-serif-v33-latin-italic.woff2") format("woff2"); }
+@font-face { font-family: "Noto Serif"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/noto-serif/noto-serif-v33-latin-regular.woff2") format("woff2"); }
+@font-face { font-family: "Noto Sans Mono"; font-style: normal; font-weight: 400; font-display: swap; src: url("/fonts/noto-mono/noto-sans-mono-v37-latin-regular.woff2") format("woff2"); }
+html, body { margin: 0; background: #0b0b0d; color: #ededed; min-height: 100vh; font-family: "BC Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; -webkit-font-smoothing: antialiased; }
+body { display: flex; flex-direction: column; align-items: center; padding: 2rem 1.5rem 4rem; }
+.back { color: #0a8d65; text-decoration: none; font-size: 0.875rem; margin: 0 0 2.5rem; align-self: flex-start; padding: 0.5rem 0; }
+.back:hover { color: #10b981; }
+svg { display: block; width: 100%; max-width: 1000px; height: auto; margin: 0 auto; }
+.caption { color: #8a8a92; font-family: "Noto Serif", Georgia, serif; font-style: italic; font-size: 0.9375rem; line-height: 1.65; max-width: 44rem; margin: 2.5rem auto 0; text-align: center; }
+</style>
+</head>
+<body>
+<a class="back" href="/essays/notes-from-the-lewis-for-leader-campaign-on-digital-sovereignty">← back to essay</a>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 370" role="img" aria-labelledby="stack-title stack-desc" preserveAspectRatio="xMidYMid meet">
+	<title id="stack-title">The campaign tech stack: chosen and drifted</title>
+	<desc id="stack-desc">A block diagram of the Avi Lewis leadership campaign tech stack from September 2025 through March 2026. Four tools we chose deliberately (solidarity.tech, bespoke Astro site, individual AI tools, bespoke data integrations) sit above four tools that shipped generative-AI features underneath us during the campaign (Google Workspace with Gemini, Asana with Intelligence, Zoom with AI Companion, Canva with Magic Studio).</desc>
+	<text x="14" y="28" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="11" fill="#10b981" font-weight="700" letter-spacing="2">THE STACK WE RAN ON</text>
+	<text x="586" y="28" text-anchor="end" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">sept 2025 – mar 2026</text>
+	<text x="14" y="72" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#10b981" letter-spacing="2">CHOSEN</text>
+	<text x="74" y="72" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">tools we picked with intention</text>
+	<line x1="14" y1="92" x2="148" y2="92" stroke="#10b981" stroke-width="2"/>
+	<line x1="160" y1="92" x2="294" y2="92" stroke="#10b981" stroke-width="2"/>
+	<line x1="306" y1="92" x2="440" y2="92" stroke="#10b981" stroke-width="2"/>
+	<line x1="452" y1="92" x2="586" y2="92" stroke="#10b981" stroke-width="2"/>
+	<text x="14" y="114" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ededed">solidarity.tech</text>
+	<text x="14" y="134" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Nationwide CRM</text>
+	<text x="160" y="114" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ededed">Astro site</text>
+	<text x="160" y="134" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Candidate's site</text>
+	<text x="306" y="114" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ededed">Individual AI</text>
+	<text x="306" y="134" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Personal tools</text>
+	<text x="452" y="114" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#ededed">Integrations</text>
+	<text x="452" y="134" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Bespoke data glue</text>
+	<text x="14" y="206" font-family="'BC Sans', -apple-system, sans-serif" font-size="12" font-weight="700" fill="#8a8a92" letter-spacing="2">DRIFT</text>
+	<text x="64" y="206" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">tools that changed underneath us</text>
+	<line x1="14" y1="226" x2="148" y2="226" stroke="#3a3a42" stroke-width="1.5" stroke-dasharray="4 3"/>
+	<line x1="160" y1="226" x2="294" y2="226" stroke="#3a3a42" stroke-width="1.5" stroke-dasharray="4 3"/>
+	<line x1="306" y1="226" x2="440" y2="226" stroke="#3a3a42" stroke-width="1.5" stroke-dasharray="4 3"/>
+	<line x1="452" y1="226" x2="586" y2="226" stroke="#3a3a42" stroke-width="1.5" stroke-dasharray="4 3"/>
+	<text x="14" y="248" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#a8a8b0">Google Workspace</text>
+	<text x="14" y="268" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Mail, Docs, Drives</text>
+	<text x="14" y="296" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#0a8d65" letter-spacing="1">↳ GEMINI</text>
+	<text x="160" y="248" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#a8a8b0">Asana</text>
+	<text x="160" y="268" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Coordination</text>
+	<text x="160" y="296" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#0a8d65" letter-spacing="1">↳ INTELLIGENCE</text>
+	<text x="306" y="248" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#a8a8b0">Zoom</text>
+	<text x="306" y="268" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Meetings</text>
+	<text x="306" y="296" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#0a8d65" letter-spacing="1">↳ AI COMPANION</text>
+	<text x="452" y="248" font-family="'BC Sans', -apple-system, sans-serif" font-size="14" font-weight="700" fill="#a8a8b0">Canva</text>
+	<text x="452" y="268" font-family="'Noto Serif', Georgia, serif" font-size="12.5" font-style="italic" fill="#8a8a92">Design</text>
+	<text x="452" y="296" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#0a8d65" letter-spacing="1">↳ MAGIC STUDIO</text>
+	<text x="14" y="350" font-family="'Noto Serif', Georgia, serif" font-size="12" font-style="italic" fill="#8a8a92">Chosen items held deliberately. Drift items shipped generative-AI defaults mid-campaign.</text>
+</svg>
+<p class="caption">From <a href="/essays/notes-from-the-lewis-for-leader-campaign-on-digital-sovereignty" style="color:#0a8d65">Notes from the Lewis for Leader campaign on digital sovereignty</a>.</p>
+</body>
+</html>
