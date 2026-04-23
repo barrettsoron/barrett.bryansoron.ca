@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Newsletter" description="The Frondline — an occasional newsletter from Barrett Bryan-Soron.">
+	<article>
+		<h1>The Frondline</h1>
+		<p class="post-meta">An occasional newsletter from Barrett Bryan-Soron</p>
+
+		<p>
+			The Frondline is a short, occasional newsletter from this site. It carries recaps of recent essays and notes from <a href="/">barrett.bryansoron.ca</a>, pointers to others' writing worth reading, and events or milestones that matter to people doing durable political and technology work in Canada.
+		</p>
+
+		<form
+			action="https://buttondown.com/api/emails/embed-subscribe/frondline"
+			method="post"
+			class="embeddable-buttondown-form"
+		>
+			<label for="bd-email">Email</label>
+			<input type="email" id="bd-email" name="email" placeholder="you@example.com" required />
+			<input type="hidden" value="1" name="embed" />
+			<button type="submit">Subscribe</button>
+		</form>
+
+		<p>
+			Past issues live at <a href="https://buttondown.com/frondline" rel="noopener">buttondown.com/frondline</a>.
+		</p>
+
+		<p class="post-meta">
+			One-click unsubscribe at any time. No tracking pixels. Replies reach me at <a href="mailto:barrett@bryansoron.ca">barrett@bryansoron.ca</a>.
+		</p>
+	</article>
+</Base>
