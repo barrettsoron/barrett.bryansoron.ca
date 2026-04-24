@@ -17,9 +17,9 @@ The organizer writes an apology to the list within the hour: *Sorry for the jump
 
 They attach the originals (the real photos of real volunteers from the real field action) so the list can see them alongside what the template had produced. The closer is self-deprecating and kind-hearted: *this is what you get when organizers attempt to do design!* A line about probably being banned from Canva for the rest of the campaign. They feel *terrible* and the people who noticed were not always polite and understanding in their response.
 
-That's the shape of digital creative work in 2026. A longstanding, predictable task — remove a background, apply an outline, add a filter — became, in the span of a single campaign, shockingly unreliable. The same tool that had been removing backgrounds and applying filters reliably for years now produced faces that had never existed.
+A longstanding, predictable task — remove a background, apply an outline, add a filter — became shockingly unreliable inside a single campaign. The same tool that had been removing backgrounds and applying filters reliably for years now produced faces that had never existed.
 
-From day one, our creative director had been holding a clear line: if we're sharing a photo of volunteers, it's a real photo from the field. Zero generative AI in our creative. None. That line got harder to hold as Canva sneaked in more generative features. The team's commitment held. The team's control over what the tool was doing under the hood kept slipping.
+From day one, our creative director had been holding a clear line: if we're sharing a photo of volunteers, it's a real photo from the field. Zero generative AI in our creative. That line got harder to hold as Canva sneaked in more generative features. The team kept the commitment; what it couldn't keep was a reliable handle on what the tool was doing under the hood.
 
 Moments like that ran parallel to the main work we were doing, as we tried to manage the AI slop that big tech was forcing on everyone. Usually we caught them early, deactivated the new "feature" where we could. Sometimes, like this one, we only caught them after — and sent the apology alongside the originals as quickly as we could. The labour of noticing these changes, before or after, was its own burden.
 
@@ -174,10 +174,10 @@ Some of the most politically important infrastructure work on the campaign happe
 	<text x="485" y="236" font-family="'BC Sans', -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Winter release</text>
 	<rect x="90" y="264" width="490" height="26" fill="url(#drift-ambient)"/>
 	<text x="335" y="281" text-anchor="middle" font-family="'BC Sans', -apple-system, sans-serif" font-size="11" font-weight="700" fill="#ededed" letter-spacing="1.5">GRADUAL GEMINI DEFAULT ROLLOUT</text>
-	<text x="14" y="334" font-family="'Noto Serif', Georgia, serif" font-size="12" font-style="italic" fill="#8a8a92">Drift by defaults, drip by drip — the stack we'd started with became something else.</text>
+	<text x="14" y="334" font-family="'Noto Serif', Georgia, serif" font-size="12" font-style="italic" fill="#8a8a92">Changes shipped as defaults — the stack we'd started with became something else.</text>
 </svg></a>
 
-Across the seven months of the campaign, the stack we had chosen quietly became something else. Feature by feature, default by default. In the summer, Google Docs was a tool we used to collaborate on early platforms ideas. By March, it was a tool with "Help me write" hovering in the sidebar, Gemini offering to summarize spreadsheets, and AI features rolling into defaults without a straightforward opt-out moment. Asana kept shipping new "Asana Intelligence" features mid-campaign. Canva accelerated its "Magic Studio" rollout through the fall. Zoom deployed "AI Companion" across configurations — meeting summaries, transcript generation — in ways that required active campaign responses to contain. Meetings would begin with participants apologizing for bringing "Otter.AI" in with them — they didn't know how to turn it off. None of this happened in a single big announcement. They changed by defaults, drip by drip, until the stack we'd started with became something else.
+Across the seven months of the campaign, the stack we had chosen quietly became something else. In the summer, Google Docs was a tool we used to collaborate on early platforms ideas. By March, it was a tool with "Help me write" hovering in the sidebar, Gemini offering to summarize spreadsheets, and AI features rolling into defaults without a straightforward opt-out moment. Asana kept shipping new "Asana Intelligence" features mid-campaign. Canva accelerated its "Magic Studio" rollout through the fall. Zoom deployed "AI Companion" across configurations — meeting summaries, transcript generation — in ways that required active campaign responses to contain. Meetings would begin with participants apologizing for bringing "Otter.AI" in with them — they didn't know how to turn it off. None of this happened in a single big announcement. It arrived one default at a time.
 
 Google was particularly notorious for this. But the inertia of Google is hard to overcome because *"free"* is load-bearing for diverse, distributed teams. Every volunteer (or close enough) already has a Google account. Every collaborator already knows the interface. The cost of switching a thousand occasional contributors to something else is paid in time and attention the campaign doesn't have. This raw deal with Google and the others had *always* been extractive; the AI rollout made the extraction starkly visible. A tool we'd chosen in good faith in August was, by February, doing things we hadn't agreed to and didn't always understand.
 
@@ -185,13 +185,17 @@ Against that, new tools we chose to use were genuinely transformative. AI-assist
 
 The distinction — between tools we chose and tools that changed underneath us — sits at the centre of the argument. The issue wasn't AI in the abstract. It was who decided where, when, and how. A campaign running a Claude subscription because a specific person picked it for a specific task is a different thing than a platform quietly routing routine volunteer work through generative AI because an executive decided the roadmap. The first is a choice. The second is what happens to you.
 
-And underneath both: whether the people whose labour trained the next cycle's models had any say in the terms. Most didn't. A labour-oriented movement deploying AI without acknowledging that is working with its eyes half-closed.
+<div class="callout">
+<p>The first is a choice. The second is what happens to you.</p>
+</div>
+
+And underneath both: the people whose labour trained the next cycle's models mostly didn't have any say in the terms. We didn't solve that, and naming it here doesn't solve it either. It's a debt the movement is carrying and hasn't figured out how to pay.
 
 ## The layer most tech-stack essays miss
 
 I've mostly written about technology choices, but most of our core operational challenges weren't technical. They were case-making, training, and change management.
 
-Forms for purchase orders went unused (or inconsistently used). Invoicing automations broke because many of our young contractors were tracking billable time for the first time in their lives. Turnover was rapid in the early months. Urgency overrode standard practice — and "standard practice" across a nationwide campaign where different regions moved at different speeds in different languages was a moving target anyway. People freelanced. Parallel bookkeeping sprang up. Asking folks to adopt an unfamiliar workflow wasn't always well-received by people already stretched to their limit.
+Forms for purchase orders went unused (or inconsistently used). Invoicing automations broke because many of our young contractors were tracking billable time for the first time in their lives. Turnover was rapid in the early months. Urgency overrode standard practice — and "standard practice" across a nationwide campaign where different regions moved at different speeds in different languages was a moving target anyway. People freelanced. Parallel bookkeeping sprang up. Local groups kept calendars that conflicted with national ones. Asking folks to adopt an unfamiliar workflow wasn't always well-received by people already stretched to their limit.
 
 Underneath the workflow-adoption struggles was a harder, less tractable problem: at any given moment, we often couldn't say clearly who was responsible for making a particular decision, who was responsible for cascading it to the people who needed to act on it, or how to verify that the right information had reached the right people in time to matter. With a dozen key staff and several hundred volunteers distributed across the country — contributing real work at different speeds, through different channels, under different levels of context — that coordination task was immense.
 
@@ -201,7 +205,7 @@ That's a sovereignty problem no tool solves. Asana can show you who's assigned a
 
 ## The ladder
 
-Digital sovereignty for movements is a practice, not a state. The question isn't whether we achieved it — we didn't, and any campaign that says it did is either lying or small enough that the claim is unfalsifiable. The question is whether we knew where we weren't sovereign, whether we had a working sense of the ladder, and whether we had a plan for moving up a rung or two when we could.
+Digital sovereignty for movements is something you practice, not something you achieve. We didn't achieve it. Any campaign that claims they did is either being loose with the word or small enough that the claim can't be tested. What you can ask honestly: did we know where we weren't sovereign, did we have a working sense of the ladder, and did we have a plan for moving up a rung or two when we could.
 
 The rungs, as we found them:
 
@@ -261,6 +265,10 @@ The rungs, as we found them:
 	<text x="584" y="560" text-anchor="end" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">↓ default SaaS dependency</text>
 </svg></a>
 
-Sovereignty practice is rung-by-rung, project-by-project. Every movement operation is standing on some rung at any given moment. The job is to know which one, know the ones above and below, and to move deliberately. Movements that treat sovereignty as a practice — documented, contested, improved — will outlast the ones that treat it as a posture.
+Sovereignty practice advances slowly. Every movement operation is standing on some rung at any given moment; the job is to know which one, know the ones above and below, and move deliberately when you can. Treating the whole thing as a posture — claiming it rather than working at it — is how you stop noticing the rung you're actually on.
 
-The Avi Lewis for Leader campaign was, in this frame, one iteration of the practice. A year from now, the next campaign will be navigating threats we can't see from here — running on tools that don't exist yet, built through partnerships that haven't happened yet, enforcing lines that haven't been drawn yet. What endures across all of it is the practice itself — and the honest naming of where, in any given project, it hasn't been enough.
+<div class="callout">
+<p>Movements that treat sovereignty as a practice will outlast the ones that treat it as a posture.</p>
+</div>
+
+The Avi Lewis for Leader campaign was one iteration of the practice. The next campaign will run on tools we can't predict and face platform changes we haven't imagined. What carries forward isn't the stack or the specific lines we held — it's the work of noticing what we got wrong and writing it down, so the next team has somewhere to start.
