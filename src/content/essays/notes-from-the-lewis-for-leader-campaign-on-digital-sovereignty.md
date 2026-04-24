@@ -113,7 +113,7 @@ Returning to Canva, it carried design throughput. It's a tool many small-budget 
 
 On other AI tools specifically, we made a deliberate architectural choice: individual, not institutional. I ran a Claude Max subscription for scripting, coding, research and monitoring. Other team members used what they chose; others refused AI as much as Big Tech would allow. But generative AI for external copy and images was fully off the table. Personally identifiable information (PII) stayed isolated in solidarity.tech and restricted Google Drives. We didn't adopt a full refusal — we used the technology where it made sense, with intention, and communicated that to our volunteers and staff.
 
-The candidate's site lived outside the SaaS stack entirely. We built it bespoke in Astro — thousands of lines of it scaffolded with AI-assisted coding — because owning the site meant owning the code, the content, the deploy, and the data model. That ownership is one of the few places in the stack where the sovereignty word applies without caveats. The site was ours.
+The campaign's site lived outside the SaaS stack entirely. We built it bespoke in Astro — thousands of lines of it scaffolded with AI-assisted coding — because owning the site meant owning the code, the content, the deploy, and the data model. That ownership is one of the few places in the stack where the sovereignty word applies without caveats. The site was ours.
 
 Some of the most politically important infrastructure work on the campaign happened in a layer I was adjacent to rather than inside. A small and dedicated data team, volunteers mostly, built the integrations that held the stack together: the pipelines that moved data between our new CRM and the party's existing fundraising platform via the public site and social ads and more. I'm not the person to tell that story. What I can tell you is that the bespoke glue they wrote was where the future of our sovereignty practice can be seen. Built with clear intention, customized for Canadian data and users, interoperable and compatible with Google Workspace only where it made sense and we had full control.
 
@@ -210,7 +210,7 @@ The rungs, as we found them:
 - Paid partnership with solidarity.tech: a US vendor relationship with active co-development rather than straight SaaS.
 - Architectural segregation: PII held in solidarity.tech, no institutional AI against campaign data or generative, individuals using their own AI tools at their own risk under our confidentiality rules.
 - Human-enforced generative discipline: a candidate and creative director with a clear line, holding it against platforms that were increasingly designed to make holding it harder.
-- Owned code: the candidate's Astro site, AI-assisted in the writing and entirely ours in the running.
+- Owned code: the campaign's Astro site, AI-assisted in the writing and entirely ours in the running.
 - Accreted core: Google Workspace, Asana, Zoom, Canva — the incumbent stack, chosen after honest testing of alternatives, used with eyes open.
 - Change management and coordination: the layer we struggled with most, and the one most future campaigns will also struggle with however technology changes.
 
@@ -261,6 +261,6 @@ The rungs, as we found them:
 	<text x="584" y="560" text-anchor="end" font-family="'Noto Sans Mono', ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">↓ default SaaS dependency</text>
 </svg></a>
 
-Sovereignty practice is rung-by-rung, cycle-by-cycle. Every movement operation is standing on some rung at any given moment. The job is to know which one, know the ones above and below, and to move deliberately. Movements that treat sovereignty as a practice — documented, contested, improved — will outlast the ones that treat it as a posture.
+Sovereignty practice is rung-by-rung, project-by-project. Every movement operation is standing on some rung at any given moment. The job is to know which one, know the ones above and below, and to move deliberately. Movements that treat sovereignty as a practice — documented, contested, improved — will outlast the ones that treat it as a posture.
 
-The Avi Lewis for Leader campaign was, in this frame, a working cycle of the practice. A year from now, the next campaign will be running on tools that don't exist yet, built through partnerships that haven't happened yet, enforcing lines that haven't been drawn yet. What endures across all of it is the practice itself — and the honest naming of where, in any given cycle, it hasn't been enough.
+The Avi Lewis for Leader campaign was, in this frame, one iteration of the practice. A year from now, the next campaign will be navigating threats we can't see from here — running on tools that don't exist yet, built through partnerships that haven't happened yet, enforcing lines that haven't been drawn yet. What endures across all of it is the practice itself — and the honest naming of where, in any given project, it hasn't been enough.
