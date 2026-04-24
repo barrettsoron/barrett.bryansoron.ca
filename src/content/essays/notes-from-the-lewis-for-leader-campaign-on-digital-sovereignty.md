@@ -1,6 +1,6 @@
 ---
 title: Notes from the Lewis for Leader campaign on digital sovereignty
-date: 2026-04-21
+date: 2026-04-24
 description: "On the tech stack we ran for the winning Avi Lewis campaign for NDP Leader, the alternatives we tested and rejected, the partnerships that carried the work, and the sovereignty practice that emerged from all of it."
 draft: false
 ---
