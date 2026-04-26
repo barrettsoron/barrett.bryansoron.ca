@@ -1,6 +1,6 @@
 ---
 title: Fastmail, not Proton
-date: 2026-04-26
+date: 2026-04-21
 draft: false
 ---
 
