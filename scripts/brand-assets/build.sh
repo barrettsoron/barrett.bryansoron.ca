@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Rebuild favicon.svg and og-default.png from BC Sans + Noto Sans Mono.
+# Rebuild favicon.svg, favicon.ico, apple-touch-icon.png, and og-default.png
+# from BC Sans + Noto Sans Mono.
 # Run from anywhere; resolves repo root from the script's location.
 set -euo pipefail
 
@@ -10,6 +11,9 @@ cd "$ROOT"
 
 echo "→ favicon.svg"
 uvx --from 'fonttools[woff]' python "$SCRIPT_DIR/build_favicon.py"
+
+echo "→ favicon.ico + apple-touch-icon.png"
+uvx --from pillow python "$SCRIPT_DIR/build_raster_icons.py"
 
 echo "→ og-default.svg"
 uvx --from 'fonttools[woff]' python "$SCRIPT_DIR/build_og_default.py"
