@@ -1,10 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
     <rect width="128" height="128" rx="24" fill="#10b981"/>
-    <text
-        x="64" y="96"
-        text-anchor="middle"
-        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
-        font-weight="700"
-        font-size="92"
-        fill="#ffffff">B</text>
+    <g transform="translate(30.238 98.000) scale(0.09524 -0.09524)">
+        <path d="M312 714Q383 714 437.0 704.5Q491 695 527.5 674.0Q564 653 582.5 618.5Q601 584 601 533Q601 472 573.0 430.0Q545 388 491 379V374Q518 368 541.0 357.0Q564 346 581.5 327.0Q599 308 609.0 278.5Q619 249 619 207Q619 159 600.5 120.5Q582 82 548.0 55.0Q514 28 465.5 14.0Q417 0 357 0H90V714ZM329 431Q395 431 420.5 451.0Q446 471 446 513Q446 555 416.5 572.5Q387 590 321 590H241V431ZM241 311V125H340Q408 125 435.0 151.5Q462 178 462 222Q462 262 434.5 286.5Q407 311 335 311Z" fill="#ffffff"/>
+    </g>
 </svg>
