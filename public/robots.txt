@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /styleguide
+
+Sitemap: https://barrett.bryansoron.ca/sitemap-index.xml
