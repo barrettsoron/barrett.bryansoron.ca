@@ -21,6 +21,8 @@ Collapsing Lorde's point into "never use technology made by capital" rules out l
 
 Lorde's caution, properly applied, is about this: adopt the AI companies' framing that scale is inherently good, that efficiency is the highest value, that data centres are neutral infrastructure requiring no democratic consent, and you have lost before you started. That warning is real. Deliberate, bounded use is the answer to it.
 
+Lorde's deeper warning is about practice shaping consciousness — that what you do habitually changes what you can see. That warning is real here too. The answer to it is discipline: use AI for defined tasks, keep the analysis with your people, and you have not handed your political judgment to the platform.
+
 A campaign that refuses to use a language model to read environmental assessments, while Big Tech's lawyers use AI to generate those assessments, has not taken the moral high ground. It has taken the practical low ground.
 
 ### The mirror world and what it cost
