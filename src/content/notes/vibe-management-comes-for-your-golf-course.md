@@ -12,7 +12,7 @@ Walk back the timeline. The crew won a first contract last July. The employer tr
 
 So vibe governing has a sibling. Call it vibe management: fire fast in advance of a machine that doesn't exist yet, and figure out whether the course can actually be maintained later. Whether the contract holds, later. Whether the rough is playable in July, later. The equipment is doing political work it has not earned through any kind of performance — and the people who will catch the failure modes, the workers and the golfers and the membership, find out the hard way.
 
-A quiet electric mower replacing a guy on a gas one in 35°C heat is genuinely better. You should want that. A quiet electric mower deployed to launder a union-busting layoff past a freshly signed contract is not the same machine. Same metal on the truck, completely different deal — and the fight is the same fight as the sidewalk, the same fight as everywhere: who owns the productivity gain, who eats the risk, who keeps the job.
+A quiet electric mower replacing a guy on a gas one in 35°C heat is genuinely better. You should all want that. A quiet electric mower deployed to launder a union-busting layoff past a freshly signed contract is not the same machine. Same metal on the truck, completely different deal — and the fight is the same fight as the sidewalk, the same fight as everywhere: who owns the productivity gain, who eats the risk, who keeps the job.
 
 "The robot did it" is the new "the algorithm decided." Figure-it-out-later is the connective tissue: an elected body and a country club are running the same play because the play works. It will keep working until we make it embarrassing.
 
