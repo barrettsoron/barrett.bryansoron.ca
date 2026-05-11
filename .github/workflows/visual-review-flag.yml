@@ -1,0 +1,110 @@
+name: Visual review flag
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+  pull-requests: write
+  issues: write
+
+jobs:
+  flag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Detect visual-path changes
+        id: changes
+        uses: dorny/paths-filter@v3
+        with:
+          filters: |
+            visual:
+              - 'src/styles/**'
+              - 'src/layouts/**'
+              - 'src/components/**'
+              - 'src/pages/**/*.astro'
+              - 'astro.config.mjs'
+              - 'public/**'
+
+      - name: Ensure label exists
+        if: steps.changes.outputs.visual == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              await github.rest.issues.createLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                name: 'needs-visual-review',
+                color: 'fbca04',
+                description: 'Touches paths whose effect can only be judged by previewing the rendered site',
+              });
+            } catch (e) {
+              if (e.status !== 422) throw e;
+            }
+
+      - name: Apply label and sticky comment
+        if: steps.changes.outputs.visual == 'true'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request.number;
+            const branch = context.payload.pull_request.head.ref;
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr,
+              labels: ['needs-visual-review'],
+            });
+            const marker = '<!-- visual-review-bot -->';
+            const body = `${marker}
+**Visual review needed.** This PR touches paths whose effect can only be judged by previewing the rendered site (styles, layouts, components, page templates, public assets, or Astro config).
+
+Preview locally on a laptop before merging:
+
+\`\`\`
+git fetch origin
+git checkout ${branch}
+pnpm install
+pnpm dev
+\`\`\`
+
+Open http://localhost:4321 and confirm the change renders as expected.`;
+            const comments = await github.paginate(github.rest.issues.listComments, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pr,
+            });
+            const existing = comments.find(c => c.body && c.body.startsWith(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr,
+                body,
+              });
+            }
+
+      - name: Remove label when no visual changes remain
+        if: steps.changes.outputs.visual == 'false'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const pr = context.payload.pull_request.number;
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: pr,
+                name: 'needs-visual-review',
+              });
+            } catch (e) {
+              if (e.status !== 404) throw e;
+            }
