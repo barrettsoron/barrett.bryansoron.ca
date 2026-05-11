@@ -4,8 +4,6 @@ date: 2026-05-08
 draft: false
 ---
 
-If the [sidewalk pilot](/notes/vibe-governing-comes-for-your-sidewalk/) is what this looks like when an elected body runs the play, here's what it looks like when a private employer runs it.
-
 The Alberni Golf Club just [fired six seasonal groundskeepers](https://seiulocal2.ca/alberni-golf-club-workers-terminates-seasonal-employees/) — most with eight to fourteen years on the crew — because the club is acquiring a robotic lawn mower it hasn't taken delivery of yet. The new staffing plan is one mechanic and two groundskeepers for an eighteen-hole course in peak season. The robot has not mowed a single fairway. The contract these workers won after a ten-day strike last summer is being voided by a vendor invoice.
 
 Walk back the timeline. The crew won a first contract last July. The employer tried to break it in November and lost — settled in December with seniority, recall rights, and seasonal wage increases explicitly on the record. In February, a robotic mower was announced. In April, every seasonal was fired. The robot is the legal cover for resetting the workforce to year zero. Anyone hired this season comes in without the contract anyone bargained for.
