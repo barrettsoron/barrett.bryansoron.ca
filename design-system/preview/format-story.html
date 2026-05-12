@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<style>
+		body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); padding: 22px 26px; }
+		.row { display: flex; gap: 18px; align-items: flex-start; }
+		.specimen {
+			width: 108px; height: 192px; border-radius: 4px;
+			background: var(--bg); border: 1px solid var(--border);
+			padding: 12px 9px 10px; display: flex; flex-direction: column;
+			box-sizing: border-box; position: relative;
+			font-family: var(--font-sans);
+		}
+		.specimen .eyebrow {
+			font-family: var(--font-mono); font-size: 5px; letter-spacing: 0.22em;
+			color: var(--accent); text-transform: uppercase; font-weight: 700;
+			border-bottom: 1px solid var(--accent-dim); padding-bottom: 4px;
+		}
+		.specimen .label {
+			position: absolute; bottom: 6px; left: 9px;
+			font-family: var(--font-mono); font-size: 6px; color: var(--muted);
+			letter-spacing: 0.05em;
+		}
+		.specimen .counter {
+			position: absolute; bottom: 6px; right: 9px;
+			font-family: var(--font-mono); font-size: 6px; color: var(--accent-dim);
+		}
+		.title-h { font-size: 13px; line-height: 1.05; font-weight: 700; letter-spacing: -0.02em; margin-top: auto; }
+		.title-rule { width: 32px; height: 0; border: 0; border-top: 1.2px solid var(--accent-dim); margin: 8px 0 4px; }
+		.title-meta { font-family: var(--font-mono); font-size: 6px; color: var(--muted); }
+		.body-h { font-family: var(--font-sans); font-size: 9px; line-height: 1.15; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.015em; }
+		.body-p { font-family: var(--font-serif); font-size: 6.5px; line-height: 1.45; margin: 0 0 4px; }
+		.quote-block {
+			margin: auto 0; font-family: var(--font-serif); font-style: italic;
+			font-size: 9px; line-height: 1.3; text-align: center;
+			padding: 8px 4px; border-top: 1px solid var(--accent-dim); border-bottom: 1px solid var(--accent-dim);
+		}
+		.glyph-big { font-family: var(--font-serif); font-size: 56px; color: var(--accent); text-align: center; line-height: 1; margin: auto 0 8px; }
+		.div-h { font-family: var(--font-sans); font-size: 9px; font-weight: 700; text-align: center; letter-spacing: -0.015em; }
+		.end-eb { font-family: var(--font-mono); font-size: 5px; letter-spacing: 0.22em; color: var(--accent); text-transform: uppercase; font-weight: 700; text-align: center; margin: auto 0 8px; }
+		.end-h { font-family: var(--font-sans); font-size: 9px; font-weight: 700; text-align: center; letter-spacing: -0.015em; }
+		.end-url { font-family: var(--font-mono); font-size: 6.5px; color: var(--accent); text-align: center; margin-top: 4px; margin-bottom: auto; }
+		.legend { font-family: var(--font-mono); font-size: 10px; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 14px; }
+		.center { display: flex; align-items: center; justify-content: center; flex: 1; flex-direction: column; }
+	</style>
+</head>
+<body>
+	<p class="legend">Story format · 1080 × 1920 · five card types</p>
+	<div class="row">
+
+		<div class="specimen">
+			<div class="eyebrow">NOTES</div>
+			<div class="title-h">Fastmail, not Proton.</div>
+			<hr class="title-rule" />
+			<div class="title-meta">May 2026</div>
+			<div class="label">@barrett</div>
+			<div class="counter">01 / 06</div>
+		</div>
+
+		<div class="specimen">
+			<div class="eyebrow">SETUP</div>
+			<div class="body-h" style="margin-top:8px;">I switched mail providers last year.</div>
+			<p class="body-p">Privacy is a means, not the end. The end is doing what I want with my own correspondence.</p>
+			<p class="body-p">Proton optimises for the first. Fastmail for the second.</p>
+			<div class="label">@barrett</div>
+			<div class="counter">02 / 06</div>
+		</div>
+
+		<div class="specimen">
+			<div class="eyebrow">QUOTE</div>
+			<div class="center">
+				<div class="quote-block">Encryption I cannot read in twenty years is not, for me, durability.</div>
+			</div>
+			<div class="label">@barrett</div>
+			<div class="counter">03 / 06</div>
+		</div>
+
+		<div class="specimen">
+			<div class="center">
+				<div class="glyph-big">§</div>
+				<div class="div-h">When I'd revisit this</div>
+			</div>
+			<div class="label">@barrett</div>
+			<div class="counter">05 / 06</div>
+		</div>
+
+		<div class="specimen">
+			<div class="end-eb">READ THE FULL PIECE</div>
+			<div class="end-h">barrett.bryansoron.ca</div>
+			<div class="end-url">/fastmail-not-proton</div>
+			<div class="label">@barrett</div>
+			<div class="counter">06 / 06</div>
+		</div>
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Component — Header &amp; nav</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 22px 26px; background: #0b0b0d; font-family: var(--font-sans); }
+  header { display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; flex-wrap: wrap; }
+  .site { color: #10b981; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; text-decoration: none; }
+  nav { display: flex; gap: 1.5rem; font-size: 15px; }
+  nav a { color: #8a8a92; text-decoration: none; padding: 6px 0; }
+  nav a.cur { color: #10b981; }
+  nav a.dev { color: #0a8d65; font-style: italic; font-size: 13px; }
+  nav a.dev::before { content: "· "; color: #24242a; font-style: normal; }
+  .meta { margin-top: 14px; font-family: var(--font-mono); font-size: 11px; color: #8a8a92; letter-spacing: 0.16em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+<header>
+  <a class="site" href="#">barrett</a>
+  <nav>
+    <a class="cur" href="#">Notes</a>
+    <a href="#">Essays</a>
+    <a href="#">About</a>
+    <a class="dev" href="#">dev</a>
+  </nav>
+</header>
+<p class="meta">site mark = accent · rest nav = muted · current = accent · dev tag = italic, dim</p>
+</body>
+</html>
