@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Type — Mono details</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #0b0b0d; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .blk { border: 1px solid #24242a; border-radius: 4px; padding: 12px 14px; background: #121216; }
+  .lbl { font-family: var(--font-mono); font-size: 11px; color: #8a8a92; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 8px; font-weight: 700; }
+  .ex  { font-family: var(--font-mono); font-size: 13px; color: #ededed; font-feature-settings: "tnum" 1; line-height: 1.6; }
+  .ex code { background: transparent; padding: 0; }
+  .post-meta { font-family: var(--font-mono); font-size: 13px; color: #8a8a92; letter-spacing: -0.01em; }
+  .post-meta time { color: #0a8d65; }
+  kbd { font-family: var(--font-mono); font-size: 12px; background: #0b0b0d; border: 1px solid #24242a; border-bottom-width: 2px; border-radius: 3px; padding: 2px 6px; color: #ededed; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="blk">
+    <p class="lbl">Post meta</p>
+    <p class="post-meta"><time>2026-04-21</time> · 4 min · draft</p>
+  </div>
+  <div class="blk">
+    <p class="lbl">kbd</p>
+    <p class="ex"><kbd>⌘</kbd> <kbd>K</kbd> · <kbd>Esc</kbd> · <kbd>Tab</kbd></p>
+  </div>
+  <div class="blk">
+    <p class="lbl">Inline code</p>
+    <p class="ex">touch dist/<code>.nojekyll</code></p>
+  </div>
+  <div class="blk">
+    <p class="lbl">Tabular nums</p>
+    <p class="ex">01,182 · 11,082 · 00,902</p>
+  </div>
+</div>
+</body>
+</html>

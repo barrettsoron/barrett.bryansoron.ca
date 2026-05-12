@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Component — Subscribe form</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 22px 24px; background: #0b0b0d; font-family: var(--font-sans); color: #ededed; }
+  form {
+    display: flex; flex-wrap: wrap; gap: 12px;
+    padding: 18px;
+    background: #121216;
+    border: 1px solid #24242a;
+    border-radius: 4px;
+    align-items: center;
+  }
+  label { font-family: var(--font-mono); font-size: 11px; color: #8a8a92; letter-spacing: 0.18em; text-transform: uppercase; width: 100%; margin: 0; }
+  input[type="email"] {
+    flex: 1 1 18rem;
+    padding: 10px 12px;
+    background: #0b0b0d;
+    color: #ededed;
+    border: 1px solid #24242a;
+    border-radius: 3px;
+    font: inherit;
+  }
+  button {
+    padding: 10px 20px;
+    background: #10b981;
+    color: #0b0b0d;
+    border: none; border-radius: 3px;
+    font: inherit; font-weight: 600;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<form>
+  <label>Subscribe</label>
+  <input type="email" placeholder="you@example.org" value="" />
+  <button>Subscribe</button>
+</form>
+</body>
+</html>

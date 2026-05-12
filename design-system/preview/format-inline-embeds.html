@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<style>
+		body {
+			margin: 0; background: var(--bg); color: var(--text);
+			font-family: var(--font-sans); padding: 26px 30px;
+		}
+		.legend {
+			font-family: var(--font-mono); font-size: 10px; color: var(--muted);
+			letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 18px;
+		}
+		.row { display: flex; gap: 32px; align-items: flex-start; }
+		.col { flex: 1; max-width: 280px; }
+		.col h3 {
+			font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+			text-transform: uppercase; color: var(--accent); margin: 0 0 12px;
+			font-weight: 700;
+		}
+		.essay-body {
+			font-family: var(--font-serif); font-size: 11px; line-height: 1.55;
+			color: var(--text); padding: 14px 16px; background: transparent;
+			border-left: 1px solid var(--border);
+		}
+		.essay-body p { margin: 0 0 10px; }
+
+		/* Inline deck figure */
+		.fig {
+			margin: 14px 0 8px;
+		}
+		.fig-deck .frame {
+			width: 100%; aspect-ratio: 16/9;
+			background: #0f0f12; border: 1px solid var(--border); border-radius: 3px;
+			padding: 6px 10px; box-sizing: border-box;
+			display: flex; flex-direction: column;
+		}
+		.fig-deck .eb {
+			font-family: var(--font-mono); font-size: 4px; letter-spacing: 0.22em;
+			text-transform: uppercase; color: var(--muted); font-weight: 700; margin: 0 0 3px;
+		}
+		.fig-deck .h {
+			font-family: var(--font-sans); font-size: 8px; font-weight: 700;
+			letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 4px;
+		}
+		.fig-deck .body { font-family: var(--font-serif); font-size: 5px; line-height: 1.5; margin: 0; }
+
+		.fig-story { display: flex; justify-content: center; }
+		.fig-story .frame {
+			width: 92px; aspect-ratio: 9/16;
+			background: #0f0f12; border: 1px solid var(--border); border-radius: 6px;
+			padding: 10px 7px; box-sizing: border-box;
+			display: flex; flex-direction: column; justify-content: center;
+			position: relative;
+		}
+		.fig-story .eb {
+			position: absolute; top: 8px; left: 7px; right: 7px;
+			font-family: var(--font-mono); font-size: 4px; letter-spacing: 0.22em;
+			text-transform: uppercase; color: var(--accent); font-weight: 700;
+			padding-bottom: 3px; border-bottom: 1px solid var(--accent-dim);
+		}
+		.fig-story .quote {
+			font-family: var(--font-serif); font-style: italic; font-size: 7px;
+			line-height: 1.3; text-align: center;
+			padding: 6px 0; border-top: 1px solid var(--accent-dim); border-bottom: 1px solid var(--accent-dim);
+		}
+		.fig-story .folio {
+			position: absolute; bottom: 7px; left: 7px; right: 7px;
+			display: flex; justify-content: space-between;
+			font-family: var(--font-mono); font-size: 3.5px; color: var(--muted);
+		}
+		.fig-story .folio .ctr { color: var(--accent-dim); }
+
+		.fig-cap {
+			margin: 8px 0 0;
+			font-family: var(--font-mono); font-size: 7px; line-height: 1.55;
+			color: var(--muted);
+		}
+		.fig-cap strong {
+			font-family: var(--font-mono); font-size: 6px; letter-spacing: 0.18em;
+			text-transform: uppercase; color: var(--accent); margin-right: 0.4em;
+		}
+
+		.action {
+			position: absolute; right: 4px; bottom: 4px;
+			font-family: var(--font-mono); font-size: 3px; letter-spacing: 0.08em;
+			text-transform: uppercase; color: var(--muted);
+			background: rgba(11,11,13,0.78); border: 1px solid var(--border);
+			padding: 1.5px 3px; border-radius: 2px;
+		}
+		.fig-deck .frame { position: relative; }
+	</style>
+</head>
+<body>
+	<p class="legend">Inline embeds · column-width deck, phone-shaped story</p>
+	<div class="row">
+
+		<div class="col">
+			<h3>Deck — in essay flow</h3>
+			<div class="essay-body">
+				<p>The deck is short. Five slides, including the title.</p>
+				<figure class="fig fig-deck">
+					<div class="frame">
+						<p class="eb">THE ARGUMENT</p>
+						<div class="h">The default shape of software is extractive.</div>
+						<p class="body">Most consumer software is built to convert attention into revenue.</p>
+						<span class="action">open ↗</span>
+					</div>
+					<p class="fig-cap"><strong>Fig. 1</strong>Five slides. Use ← → to navigate.</p>
+				</figure>
+				<p>Most of what survived is comparison.</p>
+			</div>
+		</div>
+
+		<div class="col">
+			<h3>Story — in note flow</h3>
+			<div class="essay-body">
+				<p>It is below. The arrow keys work, or click to open it.</p>
+				<figure class="fig fig-story">
+					<div class="frame">
+						<div class="eb">POSITION</div>
+						<div class="quote">Encryption I cannot read in twenty years is not, for me, durability.</div>
+						<div class="folio"><span>@barrett</span><span class="ctr">03 / 06</span></div>
+						<span class="action">↗</span>
+					</div>
+				</figure>
+				<p style="text-align: center;" class="fig-cap" >
+					<strong>Fig.</strong>Six-card re-cut.
+				</p>
+				<p>The parts that survive the recasting are the parts the argument actually needs.</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

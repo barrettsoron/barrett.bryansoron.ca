@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<link rel="stylesheet" href="../formats/light-variant.css" />
+	<style>
+		body { margin: 0; font-family: var(--font-sans); padding: 0; }
+		.split { display: grid; grid-template-columns: 1fr 1fr; min-height: 220px; }
+		.panel { padding: 22px 26px; box-sizing: border-box; }
+		.dark { background: #0b0b0d; color: #ededed; }
+		.lite { background: #fbfaf7; color: #14130f; }
+		.tag {
+			font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.18em;
+			text-transform: uppercase; font-weight: 700;
+			margin: 0 0 14px;
+		}
+		.dark .tag { color: #10b981; }
+		.lite .tag { color: #0a6b4a; }
+		.head {
+			font-family: var(--font-sans); font-size: 22px; font-weight: 700;
+			letter-spacing: -0.02em; line-height: 1.1; margin: 0 0 12px;
+			text-wrap: balance;
+		}
+		.body {
+			font-family: var(--font-serif); font-size: 13px; line-height: 1.55;
+			margin: 0 0 14px; max-width: 26em;
+		}
+		.dark .body .link { color: #ededed; text-decoration: underline; text-decoration-color: #0a8d65; text-decoration-thickness: 2px; text-underline-offset: 0.22em; }
+		.lite .body .link { color: #14130f; text-decoration: underline; text-decoration-color: #1d3a2f; text-decoration-thickness: 2px; text-underline-offset: 0.22em; }
+		.swatch-row { display: flex; gap: 6px; }
+		.sw { width: 28px; height: 28px; border-radius: 2px; }
+		.dark .sw1 { background: #0b0b0d; outline: 1px solid #24242a; }
+		.dark .sw2 { background: #121216; }
+		.dark .sw3 { background: #ededed; }
+		.dark .sw4 { background: #8a8a92; }
+		.dark .sw5 { background: #10b981; }
+		.dark .sw6 { background: #0a8d65; }
+		.lite .sw1 { background: #fbfaf7; outline: 1px solid #d8d3c8; }
+		.lite .sw2 { background: #f1efe9; }
+		.lite .sw3 { background: #14130f; }
+		.lite .sw4 { background: #6b6760; }
+		.lite .sw5 { background: #0a6b4a; }
+		.lite .sw6 { background: #1d3a2f; }
+	</style>
+</head>
+<body>
+	<div class="split">
+		<div class="panel dark">
+			<p class="tag">DARK · DEFAULT</p>
+			<p class="head">A site like this one is a bag.</p>
+			<p class="body">Most prose on the web aims at a target. <span class="link">This one accumulates.</span></p>
+			<div class="swatch-row">
+				<span class="sw sw1" title="bg #0b0b0d"></span>
+				<span class="sw sw2" title="surface #121216"></span>
+				<span class="sw sw3" title="text #ededed"></span>
+				<span class="sw sw4" title="muted #8a8a92"></span>
+				<span class="sw sw5" title="accent #10b981"></span>
+				<span class="sw sw6" title="accent-dim #0a8d65"></span>
+			</div>
+		</div>
+		<div class="panel lite">
+			<p class="tag">LIGHT · DOCS</p>
+			<p class="head">A site like this one is a bag.</p>
+			<p class="body">Most prose on the web aims at a target. <span class="link">This one accumulates.</span></p>
+			<div class="swatch-row">
+				<span class="sw sw1" title="bg #fbfaf7"></span>
+				<span class="sw sw2" title="surface #f1efe9"></span>
+				<span class="sw sw3" title="text #14130f"></span>
+				<span class="sw sw4" title="muted #6b6760"></span>
+				<span class="sw sw5" title="accent #0a6b4a"></span>
+				<span class="sw sw6" title="accent-dim #1d3a2f"></span>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

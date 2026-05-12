@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Component — Posts list</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 24px; background: #0b0b0d; }
+  ul.posts { list-style: none; padding: 0; margin: 0; }
+  ul.posts li {
+    display: flex; gap: 1.25rem; align-items: baseline;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #24242a;
+  }
+  ul.posts time {
+    color: #0a8d65; font-family: var(--font-mono);
+    font-size: 13px; min-width: 5.25rem; letter-spacing: -0.01em;
+    font-feature-settings: "tnum" 1;
+  }
+  ul.posts a {
+    color: #ededed; text-decoration: none; font-size: 17px; letter-spacing: -0.01em;
+  }
+  ul.posts a:hover { color: #10b981; }
+  ul.posts li.hover a { color: #10b981; text-decoration: underline; text-decoration-color: #10b981; text-underline-offset: 0.22em; }
+</style>
+</head>
+<body>
+<ul class="posts">
+  <li><time>2026-04-21</time><a href="#">Fastmail, not Proton</a></li>
+  <li class="hover"><time>2026-04-17</time><a href="#">Le Guin on the shape of stories</a></li>
+  <li><time>2026-04-16</time><a href="#">Self-hosted fonts, in three lines</a></li>
+  <li><time>2026-02-03</time><a href="#">Before breakfast</a></li>
+</ul>
+</body>
+</html>

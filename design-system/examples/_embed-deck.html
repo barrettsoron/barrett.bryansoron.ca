@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Deck — embed wrapper</title>
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<link rel="stylesheet" href="../formats/slide-deck.css" />
+	<style>
+		html, body { margin: 0; background: var(--bg); height: 100%; }
+		/* Tighten the bottom hint overlay for small embeds — */
+		/* but keep keyboard nav alive for users who tab in.  */
+		deck-stage::part(hints) { font-size: 10px; opacity: 0.4; }
+	</style>
+</head>
+<body>
+	<!-- `no-rail` suppresses the thumbnail rail — critical for inline embeds -->
+	<deck-stage no-rail width="1920" height="1080">
+
+		<section class="slide is-title" data-screen-label="01 Title">
+			<span class="glyph-corner">§</span>
+			<p class="eyebrow">A talk · Strange Loop 2026</p>
+			<h1>Humane technology, in service of people — not capital.</h1>
+			<hr class="rule" />
+			<p class="meta">Barrett Bryan-Soron · <time>2026-05-11</time></p>
+		</section>
+
+		<section class="slide is-prose" data-screen-label="02 Argument">
+			<p class="eyebrow">The argument</p>
+			<h2>The default shape of software is extractive.</h2>
+			<div class="body">
+				<p>Most consumer software is built to convert attention into revenue. The interaction patterns follow: infinite scroll, push notifications, dark patterns at the unsubscribe link, friction where it serves the platform and ease where it serves the platform's growth.</p>
+				<p>This is not a bug. It's the rational consequence of who pays for the software and what they're buying.</p>
+			</div>
+		</section>
+
+		<section class="slide is-prose" data-screen-label="03 Pullquote">
+			<p class="eyebrow">A working definition</p>
+			<h2>Humane technology is software whose business model is aligned with the user's outcome.</h2>
+			<p class="pull">Not "ethical software." Not "privacy-first." Not "user-centric." Aligned.</p>
+		</section>
+
+		<section class="slide is-compare" data-screen-label="04 Compare">
+			<p class="eyebrow">Two business models, two products</p>
+			<h2>Same nominal feature. Different incentive. Different software.</h2>
+			<div class="cols">
+				<div class="col">
+					<p class="col-label">Ad-supported</p>
+					<h3>Social feed</h3>
+					<ul>
+						<li>Optimises time-on-app.</li>
+						<li>Algorithmic surfacing favours emotional volatility.</li>
+						<li>Chronological view is hidden or removed.</li>
+					</ul>
+				</div>
+				<div class="col">
+					<p class="col-label">Paid, user-owned</p>
+					<h3>RSS reader</h3>
+					<ul>
+						<li>Optimises read-then-leave.</li>
+						<li>Surfacing is chronological by default.</li>
+						<li>OPML import and export are core.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide-footer">
+				<span class="deck-title">Humane technology · Strange Loop 2026</span>
+				<span class="counter">04 / 05</span>
+			</div>
+		</section>
+
+		<section class="slide is-prose" data-screen-label="05 Closing">
+			<p class="eyebrow">In closing</p>
+			<h2>Designers don't choose the business model. But we choose the defaults.</h2>
+			<div class="body">
+				<p>Pick like someone will live inside the result.</p>
+			</div>
+			<div class="slide-footer">
+				<span class="deck-title">Humane technology · Strange Loop 2026</span>
+				<span class="counter">05 / 05</span>
+			</div>
+		</section>
+
+	</deck-stage>
+	<script src="../_lib/deck-stage.js"></script>
+</body>
+</html>

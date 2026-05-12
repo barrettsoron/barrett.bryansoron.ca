@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Story — embed wrapper</title>
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<link rel="stylesheet" href="../formats/story-format.css" />
+	<style>
+		html, body { margin: 0; background: var(--bg); height: 100%; }
+		deck-stage::part(hints) { font-size: 10px; opacity: 0.4; }
+	</style>
+</head>
+<body>
+	<deck-stage no-rail width="1080" height="1920">
+
+		<section class="story is-title" data-screen-label="01 Title">
+			<p class="story-title-eyebrow">Notes · Story</p>
+			<h1>Fastmail, not Proton.</h1>
+			<hr class="story-title-rule" />
+			<p class="story-title-meta">An essay in six cards · <time>May 2026</time></p>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">01 / 06</span>
+			</div>
+		</section>
+
+		<section class="story is-body" data-screen-label="02 Setup">
+			<p class="story-eyebrow">The setup</p>
+			<h2>I switched mail providers last year, and a lot of people asked me why I didn't choose Proton.</h2>
+			<p>The short version: privacy is a means, not the end. The end is <em>doing what I want with my own correspondence,</em> for as long as I want to.</p>
+			<p>Proton optimises for the first. Fastmail optimises for the second.</p>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">02 / 06</span>
+			</div>
+		</section>
+
+		<section class="story is-quote" data-screen-label="03 Quote">
+			<p class="story-eyebrow">A position</p>
+			<blockquote>Encryption that I cannot read with a standard mail client in twenty years is not, for me, durability.</blockquote>
+			<p class="story-cite">— from the longer essay</p>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">03 / 06</span>
+			</div>
+		</section>
+
+		<section class="story is-body" data-screen-label="04 Trade-off">
+			<p class="story-eyebrow">The trade-off</p>
+			<h2>I traded end-to-end encryption for IMAP, JMAP, and a thirty-year migration path.</h2>
+			<p>I keep the same inbox in <strong>mutt</strong>, in <strong>Mail.app</strong>, in a hand-rolled Python script, and in whatever client exists in 2046.</p>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">04 / 06</span>
+			</div>
+		</section>
+
+		<section class="story is-divider" data-screen-label="05 Divider">
+			<p class="glyph">§</p>
+			<h2>When I'd revisit this</h2>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">05 / 06</span>
+			</div>
+		</section>
+
+		<section class="story is-end" data-screen-label="06 End">
+			<p class="story-end-eyebrow">Read the full piece</p>
+			<h2>barrett.bryansoron.ca / fastmail-not-proton</h2>
+			<p class="story-end-url">3,200 words · ~15 min</p>
+			<div class="story-folio">
+				<span class="handle">@barrett</span>
+				<span class="counter">06 / 06</span>
+			</div>
+		</section>
+
+	</deck-stage>
+	<script src="../_lib/deck-stage.js"></script>
+</body>
+</html>

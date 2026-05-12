@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Color — Admonition rules</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #0b0b0d; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .ad { padding-top: 12px; min-height: 110px; }
+  .ad-label { font-family: var(--font-mono); font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 6px; }
+  .ad-body  { color: #ededed; font-size: 13.5px; line-height: 1.55; margin: 0; }
+  .ad-hex   { display: block; margin-top: 10px; font-family: var(--font-mono); font-size: 11px; color: #8a8a92; font-feature-settings: "tnum" 1; }
+
+  .ad-note   { border-top: 2px solid #5a8bd6; }
+  .ad-note .ad-label   { color: #8ab2ea; }
+
+  .ad-tip    { border-top: 2px solid #6aab6a; }
+  .ad-tip .ad-label    { color: #8ccf8c; }
+
+  .ad-caveat { border-top: 2px solid #10b981; }
+  .ad-caveat .ad-label { color: #10b981; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="ad ad-note">
+    <p class="ad-label">Note</p>
+    <p class="ad-body">A quiet aside. Information the reader needs, not a warning.</p>
+    <span class="ad-hex">#5A8BD6 · #8AB2EA</span>
+  </div>
+  <div class="ad ad-tip">
+    <p class="ad-label">Tip</p>
+    <p class="ad-body">Practical detail. Used rarely; the form is the message.</p>
+    <span class="ad-hex">#6AAB6A · #8CCF8C</span>
+  </div>
+  <div class="ad ad-caveat">
+    <p class="ad-label">Caveat</p>
+    <p class="ad-body">A trade-off being acknowledged. Viridian, on purpose.</p>
+    <span class="ad-hex">#10B981 (accent)</span>
+  </div>
+</div>
+</body>
+</html>

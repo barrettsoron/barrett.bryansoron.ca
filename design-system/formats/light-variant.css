@@ -1,0 +1,30 @@
+/* =============================================================
+   Light variant — for the occasional DOCX/PDF document.
+   Apply with class="light" on <html>, or wrap with .docs-light.
+   Only the tokens change; semantic rules in colors_and_type.css
+   pick up the new values automatically.
+   ============================================================= */
+
+:root.light,
+.docs-light {
+	--bg:        #fbfaf7;  /* warm near-white, paper not screen */
+	--surface:   #f1efe9;
+	--border:    #d8d3c8;
+
+	--text:      #14130f;  /* warm near-black */
+	--muted:     #6b6760;
+
+	/* Deep viridian — the screen-green is too neon on cream. */
+	--accent:     #0a6b4a;
+	--accent-dim: #1d3a2f;
+
+	/* Admonition rules darken to match */
+	--note:       #3a5d99;
+	--note-label: #2c4778;
+	--tip:        #3d7a3d;
+	--tip-label:  #2f5f2f;
+}
+
+/* Section glyph reads better as accent-dim on cream */
+:root.light hr::before,
+.docs-light hr::before { color: var(--accent-dim); }

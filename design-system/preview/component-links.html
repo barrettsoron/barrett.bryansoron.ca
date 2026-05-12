@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Component — Links &amp; focus</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 20px 24px; background: #0b0b0d; font-family: var(--font-sans); color: #ededed; }
+  p { font-size: 15px; line-height: 1.7; margin: 0 0 12px; }
+  a.rest, a.hover {
+    text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 0.22em;
+  }
+  a.rest  { color: #ededed; text-decoration-color: #0a8d65; }
+  a.hover { color: #10b981; text-decoration-color: #10b981; }
+  a.focus {
+    color: #ededed; text-decoration-color: #0a8d65;
+    outline: 2px solid #10b981; outline-offset: 3px; border-radius: 2px;
+  }
+  .lbl { font-family: var(--font-mono); font-size: 11px; color: #8a8a92; letter-spacing: 0.16em; text-transform: uppercase; margin: 0 0 8px; display: block; }
+</style>
+</head>
+<body>
+<p><span class="lbl">Rest</span><a class="rest" href="#">Self-hosting is the less glamorous answer.</a></p>
+<p><span class="lbl">Hover</span><a class="hover" href="#">Self-hosting is the less glamorous answer.</a></p>
+<p><span class="lbl">Focus-visible</span><a class="focus" href="#">Self-hosting is the less glamorous answer.</a></p>
+</body>
+</html>

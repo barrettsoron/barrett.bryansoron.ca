@@ -1,0 +1,225 @@
+/* =============================================================
+   Slide deck — 16:9 deck format (1920 × 1080).
+   Three layouts only:  .slide.is-title, .slide.is-prose, .slide.is-compare.
+   Pair with deck_stage.js. Dark-mode native.
+   ============================================================= */
+
+.slide {
+	width: 1920px;
+	height: 1080px;
+	background: var(--bg);
+	color: var(--text);
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+	position: relative;
+	padding: 100px 120px 120px;
+	overflow: hidden;
+}
+
+/* Shared footer strip — title slides opt out */
+.slide-footer {
+	position: absolute;
+	left: 120px; right: 120px; bottom: 56px;
+	padding-top: 18px;
+	border-top: 1px solid var(--accent-dim);
+	display: flex; justify-content: space-between; align-items: baseline;
+	font-family: var(--font-mono);
+	font-size: 18px;
+	color: var(--muted);
+	letter-spacing: -0.01em;
+}
+.slide-footer .deck-title { color: var(--muted); }
+.slide-footer .counter    { color: var(--accent-dim); font-feature-settings: "tnum" 1; }
+
+/* ---------- Layout 1 — title / section divider ---------- */
+.slide.is-title {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 160px;
+}
+.slide.is-title .eyebrow {
+	font-family: var(--font-mono);
+	font-size: 22px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin: 0 0 36px;
+	font-weight: 700;
+}
+.slide.is-title h1 {
+	font-family: var(--font-sans);
+	font-size: 116px;
+	line-height: 1.05;
+	letter-spacing: -0.025em;
+	font-weight: 700;
+	margin: 0 0 48px;
+	max-width: 1480px;
+	text-wrap: balance;
+}
+.slide.is-title .rule {
+	height: 0; border: 0;
+	border-top: 2px solid var(--accent-dim);
+	width: 280px;
+	margin: 0 0 36px;
+}
+.slide.is-title .meta {
+	font-family: var(--font-mono);
+	font-size: 22px;
+	color: var(--muted);
+	letter-spacing: -0.01em;
+}
+.slide.is-title .meta time { color: var(--accent-dim); }
+
+/* Decorative § glyph in the corner */
+.slide.is-title .glyph-corner {
+	position: absolute;
+	top: 96px; right: 140px;
+	font-family: var(--font-serif);
+	font-size: 320px;
+	line-height: 1;
+	color: var(--accent);
+	opacity: 0.12;
+	pointer-events: none;
+	letter-spacing: -0.02em;
+}
+
+/* ---------- Layout 2 — prose ---------- */
+.slide.is-prose {
+	padding: 120px 120px 140px;
+}
+.slide.is-prose .eyebrow {
+	font-family: var(--font-mono);
+	font-size: 18px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin: 0 0 24px;
+	font-weight: 700;
+}
+.slide.is-prose h2 {
+	font-family: var(--font-sans);
+	font-size: 68px;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	margin: 0 0 56px;
+	max-width: 1440px;
+	text-wrap: balance;
+}
+.slide.is-prose .body {
+	max-width: 1100px;   /* the editorial column, ~36rem at scale */
+}
+.slide.is-prose .body p,
+.slide.is-prose .body li {
+	font-family: var(--font-serif);
+	font-size: 34px;
+	line-height: 1.55;
+	color: var(--text);
+	margin: 0 0 24px;
+}
+.slide.is-prose .body em { font-style: italic; }
+.slide.is-prose .body strong { font-weight: 700; color: var(--text); }
+.slide.is-prose .body ol,
+.slide.is-prose .body ul { padding-left: 36px; margin: 0 0 24px; }
+.slide.is-prose .body ol li::marker { color: var(--accent-dim); }
+
+/* Pull-quote variant of prose */
+.slide.is-prose .pull {
+	font-family: var(--font-serif);
+	font-style: italic;
+	font-size: 52px;
+	line-height: 1.35;
+	max-width: 1500px;
+	padding: 48px 0;
+	border-top: 1px solid var(--accent-dim);
+	border-bottom: 1px solid var(--accent-dim);
+	margin: 24px 0 0;
+	text-wrap: pretty;
+}
+
+/* ---------- Layout 3 — comparison (column breaks) ---------- */
+.slide.is-compare {
+	padding: 120px 120px 140px;
+	display: flex;
+	flex-direction: column;
+}
+.slide.is-compare .eyebrow {
+	font-family: var(--font-mono);
+	font-size: 18px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--muted);
+	margin: 0 0 24px;
+	font-weight: 700;
+}
+.slide.is-compare h2 {
+	font-family: var(--font-sans);
+	font-size: 56px;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	margin: 0 0 64px;
+	max-width: 1500px;
+	text-wrap: balance;
+}
+.slide.is-compare .cols {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 100px;
+	flex: 1;
+}
+.slide.is-compare .col {
+	display: flex; flex-direction: column;
+	padding-top: 20px;
+	border-top: 2px solid var(--accent-dim);
+}
+.slide.is-compare .col-label {
+	font-family: var(--font-mono);
+	font-size: 18px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin: 0 0 24px;
+	font-weight: 700;
+}
+.slide.is-compare .col h3 {
+	font-family: var(--font-sans);
+	font-size: 40px;
+	line-height: 1.15;
+	letter-spacing: -0.01em;
+	font-weight: 700;
+	margin: 0 0 28px;
+}
+.slide.is-compare .col p,
+.slide.is-compare .col li {
+	font-family: var(--font-serif);
+	font-size: 28px;
+	line-height: 1.55;
+	color: var(--text);
+	margin: 0 0 16px;
+}
+.slide.is-compare .col ul { padding-left: 28px; margin: 0; }
+
+/* Table variant of comparison — column rule yields for tabular data */
+.slide.is-compare table {
+	width: 100%; border-collapse: collapse;
+	font-family: var(--font-sans);
+	font-size: 28px;
+	margin-top: 8px;
+}
+.slide.is-compare th,
+.slide.is-compare td {
+	padding: 18px 24px;
+	text-align: left;
+	border-bottom: 1px solid var(--border);
+	vertical-align: top;
+}
+.slide.is-compare th {
+	color: var(--accent);
+	font-family: var(--font-mono);
+	font-size: 18px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	font-weight: 700;
+}

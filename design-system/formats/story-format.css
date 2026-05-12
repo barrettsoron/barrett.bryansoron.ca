@@ -1,0 +1,210 @@
+/* =============================================================
+   Story format — vertical 9:16 cards for online (1080 × 1920).
+   For story sequences and social posts.
+   Pair with deck_stage.js: each <section> is one card.
+   Dark-mode native; uses the same tokens as the site.
+   ============================================================= */
+
+.story {
+	width: 1080px;
+	height: 1920px;
+	background: var(--bg);
+	color: var(--text);
+	padding: 160px 110px 140px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+	position: relative;
+	overflow: hidden;
+}
+
+/* Eyebrow / running ribbon at the top */
+.story-eyebrow {
+	position: absolute;
+	top: 80px; left: 110px; right: 110px;
+	display: flex; align-items: center; gap: 24px;
+	font-family: var(--font-mono);
+	font-size: 22px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	font-weight: 700;
+	margin: 0;
+}
+.story-eyebrow::after {
+	content: ""; flex: 1; height: 1px; background: var(--accent-dim);
+}
+
+/* Folio / page counter at the bottom */
+.story-folio {
+	position: absolute;
+	bottom: 80px; left: 110px; right: 110px;
+	display: flex; align-items: baseline; justify-content: space-between;
+	font-family: var(--font-mono);
+	font-size: 22px;
+	color: var(--muted);
+	letter-spacing: -0.01em;
+	font-feature-settings: "tnum" 1;
+}
+.story-folio .handle { color: var(--text); }
+.story-folio .counter { color: var(--accent-dim); }
+
+/* ---------- Layout 1 — title card ---------- */
+.story.is-title {
+	justify-content: flex-end;
+}
+.story.is-title .story-title-eyebrow {
+	font-family: var(--font-mono);
+	font-size: 26px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin: 0 0 36px;
+	font-weight: 700;
+}
+.story.is-title h1 {
+	font-family: var(--font-sans);
+	font-size: 116px;
+	line-height: 1.05;
+	letter-spacing: -0.025em;
+	font-weight: 700;
+	color: var(--text);
+	margin: 0 0 56px;
+	text-wrap: balance;
+}
+.story.is-title .story-title-meta {
+	font-family: var(--font-mono);
+	font-size: 26px;
+	color: var(--muted);
+	margin: 0 0 24px;
+	font-feature-settings: "tnum" 1;
+}
+.story.is-title .story-title-meta time { color: var(--accent-dim); }
+.story.is-title .story-title-rule {
+	height: 0; border: 0;
+	border-top: 2px solid var(--accent-dim);
+	width: 240px;
+	margin: 0 0 24px;
+}
+
+/* ---------- Layout 2 — body / prose ---------- */
+.story.is-body {
+	justify-content: center;
+}
+.story.is-body h2 {
+	font-family: var(--font-sans);
+	font-size: 56px;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	color: var(--text);
+	margin: 0 0 44px;
+	text-wrap: balance;
+}
+.story.is-body p,
+.story.is-body li {
+	font-family: var(--font-serif);
+	font-size: 42px;
+	line-height: 1.55;
+	color: var(--text);
+	margin: 0 0 28px;
+}
+.story.is-body em { font-style: italic; }
+.story.is-body strong { font-weight: 700; }
+.story.is-body ol,
+.story.is-body ul { padding-left: 48px; margin: 0 0 28px; }
+.story.is-body ol li::marker { color: var(--accent-dim); }
+.story.is-body a {
+	color: var(--text);
+	text-decoration: underline;
+	text-decoration-color: var(--accent-dim);
+	text-decoration-thickness: 3px;
+	text-underline-offset: 0.22em;
+}
+
+/* ---------- Layout 3 — pullquote ---------- */
+.story.is-quote {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.story.is-quote blockquote {
+	margin: 0 auto;
+	padding: 64px 56px;
+	/* reset the global essay blockquote's left rule + muted colour */
+	border: 0;
+	border-top: 1px solid var(--accent-dim);
+	border-bottom: 1px solid var(--accent-dim);
+	font-family: var(--font-serif);
+	font-style: italic;
+	font-size: 60px;
+	line-height: 1.35;
+	color: var(--text);
+	max-width: 800px;
+	text-align: center;
+	text-wrap: pretty;
+}
+.story.is-quote .story-cite {
+	margin-top: 44px;
+	font-family: var(--font-mono);
+	font-size: 22px;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	color: var(--muted);
+}
+
+/* ---------- Layout 4 — section divider (§) ---------- */
+.story.is-divider {
+	justify-content: center;
+	align-items: center;
+}
+.story.is-divider .glyph {
+	font-family: var(--font-serif);
+	font-size: 360px;
+	color: var(--accent);
+	line-height: 1;
+	margin: 0 0 64px;
+}
+.story.is-divider h2 {
+	font-family: var(--font-sans);
+	font-size: 64px;
+	line-height: 1.15;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	color: var(--text);
+	margin: 0;
+	text-align: center;
+}
+
+/* ---------- Layout 5 — closing / credits ---------- */
+.story.is-end {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+.story.is-end .story-end-eyebrow {
+	font-family: var(--font-mono);
+	font-size: 26px;
+	letter-spacing: 0.22em;
+	text-transform: uppercase;
+	color: var(--accent);
+	margin: 0 0 56px;
+	font-weight: 700;
+}
+.story.is-end h2 {
+	font-family: var(--font-sans);
+	font-size: 76px;
+	line-height: 1.1;
+	letter-spacing: -0.02em;
+	font-weight: 700;
+	color: var(--text);
+	margin: 0 0 32px;
+	text-wrap: balance;
+}
+.story.is-end .story-end-url {
+	font-family: var(--font-mono);
+	font-size: 30px;
+	color: var(--accent);
+	margin: 0;
+}

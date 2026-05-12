@@ -1,0 +1,137 @@
+/* =============================================================
+   Inline embeds — drop a deck or story into the editorial flow.
+   Both render as <figure> with the chrome of an editorial figure:
+   a quiet top + bottom rule, a caption set in mono.
+
+   Iframe the standalone deck/story file at design size; the
+   deck-stage component handles scale-to-fit on its own. This
+   keeps format CSS contained and avoids leakage into the essay.
+   ============================================================= */
+
+.embed {
+	margin: 2.75rem 0;
+	padding: 0;
+}
+.embed figcaption {
+	margin: 0.75rem 0 0;
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	line-height: 1.55;
+	letter-spacing: 0.01em;
+	color: var(--muted);
+}
+.embed figcaption strong {
+	display: inline-block;
+	margin-right: 0.4em;
+	font-family: var(--font-mono);
+	font-weight: 700;
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	font-size: 0.6875rem;
+	color: var(--accent);
+}
+.embed figcaption a {
+	color: var(--muted);
+	text-decoration: underline;
+	text-decoration-color: var(--accent-dim);
+	text-decoration-thickness: 1px;
+}
+.embed figcaption a:hover {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+/* ---------- Deck embed (16:9) ---------- */
+.embed-deck .embed-frame {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 3px;
+	overflow: hidden;
+}
+.embed-deck iframe {
+	position: absolute; inset: 0;
+	width: 100%; height: 100%;
+	border: 0;
+	background: var(--bg);
+}
+
+/* Desktop bleed — the deck breaks the editorial column on wider
+   viewports. The column holds for prose; the deck earns the wider
+   frame. Three breakpoints, each a quiet step.
+   Assumes the column is 36rem centered with 1.5rem padding. */
+@media (min-width: 1000px) {
+	.embed-deck { margin-left: -3rem;  margin-right: -3rem; }
+}
+@media (min-width: 1200px) {
+	.embed-deck { margin-left: -6rem;  margin-right: -6rem; }
+}
+@media (min-width: 1500px) {
+	.embed-deck { margin-left: -10rem; margin-right: -10rem; }
+}
+
+/* ---------- Story embed (9:16) ---------- */
+/* Narrower than the column so the column still reads as the page.
+   Centered with a thin rule on each side, like a story plate. */
+.embed-story {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.embed-story .embed-frame {
+	position: relative;
+	width: 100%;
+	max-width: 18rem;       /* ~288px — phone-shaped, not column-shaped */
+	aspect-ratio: 9 / 16;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	overflow: hidden;
+}
+.embed-story iframe {
+	position: absolute; inset: 0;
+	width: 100%; height: 100%;
+	border: 0;
+	background: var(--bg);
+}
+.embed-story figcaption {
+	max-width: 18rem;
+	text-align: left;
+}
+
+/* ---------- Quiet "open standalone" affordance ---------- */
+.embed-action {
+	position: absolute;
+	right: 0.6rem; bottom: 0.6rem;
+	z-index: 2;
+	font-family: var(--font-mono);
+	font-size: 0.6875rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0.3rem 0.5rem;
+	color: var(--muted);
+	background: rgba(11, 11, 13, 0.78);
+	border: 1px solid var(--border);
+	border-radius: 2px;
+	text-decoration: none;
+	backdrop-filter: blur(4px);
+}
+.embed-action:hover {
+	color: var(--accent);
+	border-color: var(--accent-dim);
+}
+
+/* ---------- Reduced motion / load placeholder ---------- */
+.embed-frame[data-loading="true"]::after {
+	content: "loading…";
+	position: absolute; inset: 0;
+	display: flex; align-items: center; justify-content: center;
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.18em;
+	color: var(--muted);
+	text-transform: uppercase;
+	pointer-events: none;
+}

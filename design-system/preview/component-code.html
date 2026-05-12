@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Component — Code &amp; pre</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 24px; background: #0b0b0d; font-family: var(--font-sans); color: #ededed; }
+  p { font-size: 14px; line-height: 1.6; margin: 0 0 12px; }
+  code { font-family: var(--font-mono); font-size: 12.5px; background: #121216; padding: 0.1em 0.4em; border-radius: 3px; color: #ededed; }
+  pre {
+    background: #121216;
+    padding: 12px 14px;
+    margin: 0 0 4px;
+    overflow-x: auto;
+    border-radius: 4px;
+    font-size: 12.5px;
+    line-height: 1.6;
+    border: 1px solid #24242a;
+    font-family: var(--font-mono);
+  }
+  pre code { background: transparent; padding: 0; font-size: inherit; }
+  .c { color: #8a8a92; }
+</style>
+</head>
+<body>
+<p>The shape of the build script — boring is a feature. Run <code>npm run build</code>:</p>
+<pre><code><span class="c">#!/usr/bin/env bash</span>
+set -euo pipefail
+
+npm run build
+touch dist/.nojekyll</code></pre>
+</body>
+</html>
