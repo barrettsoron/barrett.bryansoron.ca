@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Color — Foreground</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #0b0b0d; }
+  .row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card {
+    background: #121216;
+    border: 1px solid var(--border);
+    border-radius: var(--r-3);
+    padding: 14px 16px;
+  }
+  .card .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .specimen { font-size: 18px; line-height: 1.4; letter-spacing: -0.01em; margin: 0 0 14px; }
+  .text  .specimen { color: #ededed; }
+  .muted .specimen { color: #8a8a92; font-style: italic; }
+  .meta { display: flex; justify-content: space-between; align-items: baseline; }
+  .name { font-weight: 700; color: var(--text); font-size: 13px; }
+  .hex  { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-feature-settings: "tnum" 1; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="card text">
+    <p class="label">Text — fg1</p>
+    <p class="specimen">The reward for writing into that kind of internet is modest and strange.</p>
+    <div class="meta"><span class="name">--text</span><span class="hex">#EDEDED</span></div>
+  </div>
+  <div class="card muted">
+    <p class="label">Muted — fg2</p>
+    <p class="specimen">Meta, dates, nav at rest, secondary copy.</p>
+    <div class="meta"><span class="name">--muted</span><span class="hex">#8A8A92</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Notes on the talk I'm giving Thursday — barrett</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<link rel="stylesheet" href="../formats/inline-embed.css" />
+	<style>
+		/* ----- Site chrome (lifted from ui_kits/site/index.html) ----- */
+		/* Match the real astro site: body itself is capped at --measure
+		   (36rem) and centered. Inline embeds bleed *outside* that cap
+		   with negative margins — fine because body overflow is visible. */
+		body {
+			margin: 0 auto;
+			max-width: var(--measure);
+			padding: 3rem 1.5rem 6rem;
+		}
+		main { min-height: 60vh; }
+		.skip-link {
+			position: absolute; left: 0.5rem; top: 0.5rem;
+			background: var(--accent); color: var(--bg);
+			padding: 0.5rem 0.75rem; text-decoration: none; font-weight: 700;
+			border-radius: 2px;
+			transform: translateY(-200%); transition: transform 0.15s ease; z-index: 10;
+		}
+		.skip-link:focus { transform: translateY(0); }
+
+		header {
+			display: flex; justify-content: space-between; align-items: baseline;
+			gap: 1.5rem; margin-bottom: 4rem; flex-wrap: wrap;
+		}
+		header .site {
+			color: var(--accent); font-weight: 700; font-size: 1.0625rem;
+			letter-spacing: -0.01em; text-decoration: none; border-bottom: none;
+		}
+		header .site:hover { color: var(--text); }
+		nav { display: flex; gap: 1.5rem; font-size: 0.9375rem; }
+		nav a {
+			color: var(--muted); text-decoration: none; border-bottom: none;
+			padding: 0.5rem 0; min-height: 44px;
+			display: inline-flex; align-items: center;
+		}
+		nav a:hover { color: var(--text); }
+		nav a[aria-current="page"] { color: var(--accent); }
+
+		main { min-height: 60vh; }
+
+		.post-meta {
+			color: var(--muted); font-size: 0.8125rem; margin-bottom: 2rem;
+			font-family: var(--font-mono); letter-spacing: -0.01em;
+		}
+		.post-meta time { color: var(--accent-dim); }
+
+		.callout {
+			margin: 2.5rem 0; padding: 1.75rem 1.5rem;
+			border-top: 1px solid var(--accent-dim);
+			border-bottom: 1px solid var(--accent-dim);
+			text-align: center; font-size: 1.0625rem;
+			font-family: var(--font-serif); font-style: italic;
+		}
+		.callout p { margin: 0; }
+
+		.admonition {
+			margin: 2.25rem 0; padding-top: 0.75rem;
+			border-top: 2px solid var(--border);
+			font-size: 0.9375rem; font-family: var(--font-sans);
+		}
+		.admonition-label {
+			display: block; margin: 0 0 0.45rem;
+			font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 700;
+			text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted);
+		}
+		.admonition.caveat { border-top-color: var(--accent); }
+		.admonition.caveat .admonition-label { color: var(--accent); }
+
+		footer {
+			margin-top: 6rem; padding-top: 2.5rem;
+			border-top: 1px solid var(--border);
+			color: var(--text); font-size: 0.9375rem;
+		}
+		.footer-nav {
+			display: flex; flex-wrap: wrap; gap: 1.5rem;
+			padding-bottom: 2rem; border-bottom: 1px solid var(--border);
+			margin-bottom: 2.5rem;
+		}
+		.footer-nav a { color: var(--muted); text-decoration: none; padding: 0.25rem 0; }
+		.footer-nav a:hover { color: var(--text); }
+		.footer-land {
+			margin: 0 0 1.25rem; padding-top: 1.25rem;
+			border-top: 1px solid var(--border);
+			color: var(--muted); font-size: 0.8125rem; line-height: 1.65; max-width: 32rem;
+		}
+		.footer-copyright {
+			margin: 0; color: var(--muted); font-size: 0.8125rem;
+			font-family: var(--font-mono); letter-spacing: -0.01em;
+		}
+
+		/* Wider editorial canvas — let the figure bleed wider than
+		   the 36rem column on desktop. The negative margins in
+		   formats/inline-embed.css handle the bleed itself. */
+	</style>
+</head>
+<body>
+	<a class="skip-link" href="#main">Skip to content</a>
+
+	<header>
+		<a class="site" href="#">barrett</a>
+		<nav aria-label="Primary">
+			<a href="#">Notes</a>
+			<a href="#" aria-current="page">Essays</a>
+			<a href="#">About</a>
+			<a href="#">RSS</a>
+		</nav>
+	</header>
+
+	<main id="main">
+		<p style="margin-bottom: 1rem;"><a href="#">← Essays</a></p>
+
+		<h1>Notes on the talk I'm giving Thursday</h1>
+
+		<p class="post-meta">
+			<time datetime="2026-05-09">2026-05-09</time> · essay · 612 words · draft
+		</p>
+
+		<article class="essay-body">
+
+			<p>I'm giving a talk Thursday at Strange Loop. The working title is <em>Humane technology, in service of people — not capital.</em> I'm posting the slides here a few days early because I'd rather the argument be tested in public before I get on a stage with it.</p>
+
+			<p>The deck is short. Five slides, including the title. I've been trying to learn that a slide deck is a set of <strong>posters</strong>, not a document — that what's on the screen is the thing the audience can read in three seconds while I'm saying the thing I actually want them to hear.</p>
+
+			<!-- Inline deck embed -->
+			<figure class="embed embed-deck">
+				<div class="embed-frame">
+					<iframe
+						src="_embed-deck.html"
+						title="Slide deck: Humane technology, in service of people"
+						loading="lazy"
+						allow="fullscreen"></iframe>
+					<a class="embed-action" href="_embed-deck.html" target="_blank" rel="noopener">
+						open ↗
+					</a>
+				</div>
+				<figcaption>
+					<strong>Fig. 1</strong>
+					Five slides. Use ← → to navigate; press R to reset. The full version, with speaker notes, is at the link above.
+				</figcaption>
+			</figure>
+
+			<h2>What I cut</h2>
+
+			<p>The first draft of this deck was sixteen slides. The reason it's now five is that I kept asking, <em>what is the slide for?</em> If the answer was "to remind me what to say next," I cut it. The speaker notes can do that. If the answer was "to make a point the spoken sentence can't make on its own," I kept it.</p>
+
+			<p>Most of what survived is comparison. The shape of an extractive product next to the shape of an aligned one. The shape of one default next to the shape of another. <em>Same nominal feature, different incentive, different software.</em></p>
+
+			<h2>What I'd say to a slow reader</h2>
+
+			<p>For people who want the argument without the talk, I've cut a vertical version too. Six cards, designed to be read on a phone — at the bus stop, in a queue, between meetings. It's the same shape of argument, accumulated rather than delivered.</p>
+
+			<!-- Inline story embed -->
+			<figure class="embed embed-story">
+				<div class="embed-frame">
+					<iframe
+						src="_embed-story.html"
+						title="Story sequence: Fastmail, not Proton"
+						loading="lazy"
+						allow="fullscreen"></iframe>
+					<a class="embed-action" href="_embed-story.html" target="_blank" rel="noopener">
+						open ↗
+					</a>
+				</div>
+				<figcaption>
+					<strong>Fig. 2</strong>
+					Six cards. The arrow keys still work; this is one of those formats where a horizontal swipe ought to be the natural gesture but a keyboard is what we've got.
+				</figcaption>
+			</figure>
+
+			<aside class="admonition caveat">
+				<span class="admonition-label">Caveat</span>
+				<p>This piece is a working draft. The talk on Thursday will probably differ — anything I get pushed on in conversation in the next forty-eight hours might land in the spoken version and not back here. I'll reconcile after.</p>
+			</aside>
+
+			<h2>The bag, again</h2>
+
+			<p>I keep coming back to Le Guin's bag. A talk is the most spear-shaped form there is — a single thread, in a fixed order, aimed at an audience that can't pause you. The compensation is that the recording, and the slides, and the vertical re-cut, and this essay — those can be a bag. The talk fires the arrow. Everything around it carries things home.</p>
+
+			<hr />
+
+			<div class="callout"><p>The slide is what the audience reads. The notes are what I say. The essay is what I meant.</p></div>
+
+		</article>
+	</main>
+
+	<footer>
+		<div class="footer-nav">
+			<a href="#">Notes</a>
+			<a href="#">Essays</a>
+			<a href="#">About</a>
+			<a href="#">RSS</a>
+		</div>
+		<p class="footer-land">
+			Written from the unceded ancestral territories of the xʷməθkʷəy̓əm (Musqueam), Sḵwx̱wú7mesh (Squamish), and səlilwətaʔɬ (Tsleil-Waututh) Nations.
+		</p>
+		<p class="footer-copyright">© 2026 Barrett Bryan-Soron · MIT / CC BY-SA 4.0</p>
+	</footer>
+</body>
+</html>

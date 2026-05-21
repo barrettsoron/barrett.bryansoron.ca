@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Deck — Humane Technology, In Service Of People</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="../colors_and_type.css" />
+	<link rel="stylesheet" href="../formats/slide-deck.css" />
+	<link rel="icon" type="image/svg+xml" href="../assets/frondline-icon.svg" />
+	<style>
+		body { margin: 0; background: #000; }
+	</style>
+</head>
+<body>
+	<deck-stage>
+
+		<!-- 1 — TITLE -->
+		<section class="slide is-title" data-screen-label="01 Title">
+			<span class="glyph-corner">§</span>
+			<p class="eyebrow">A talk · Strange Loop, 2026</p>
+			<h1>Humane technology, in service of people — not capital.</h1>
+			<hr class="rule" />
+			<p class="meta">Barrett Bryan-Soron · <time>2026‑05‑11</time></p>
+		</section>
+
+		<!-- 2 — PROSE — argument -->
+		<section class="slide is-prose" data-screen-label="02 Argument">
+			<p class="eyebrow">The argument</p>
+			<h2>The default shape of software is extractive.</h2>
+			<div class="body">
+				<p>Most consumer software is built to convert attention into revenue. The interaction patterns follow: infinite scroll, push notifications, dark patterns at the unsubscribe link, friction where it serves the platform and ease where it serves the platform's growth.</p>
+				<p>This is not a bug. It's the rational consequence of who pays for the software and what they're buying.</p>
+				<p>So when we say <em>humane technology</em>, the work is to be specific about <strong>which incentive we are designing against.</strong></p>
+			</div>
+		</section>
+
+		<!-- 3 — PROSE — pullquote -->
+		<section class="slide is-prose" data-screen-label="03 Pullquote">
+			<p class="eyebrow">A working definition</p>
+			<h2>Humane technology is software whose business model is aligned with the user's outcome.</h2>
+			<p class="pull">Not "ethical software." Not "privacy-first." Not "user-centric." Aligned. The interests of the people running the company point in the same direction as the interests of the people using the thing.</p>
+		</section>
+
+		<!-- 4 — COMPARE — two columns -->
+		<section class="slide is-compare" data-screen-label="04 Compare">
+			<p class="eyebrow">Two business models, two products</p>
+			<h2>Same nominal feature. Different incentive. Different software.</h2>
+			<div class="cols">
+				<div class="col">
+					<p class="col-label">Ad-supported</p>
+					<h3>Social feed</h3>
+					<ul>
+						<li>Optimises time-on-app — the metric the advertiser pays for.</li>
+						<li>Algorithmic surfacing favours emotional volatility.</li>
+						<li>Chronological view is hidden or removed.</li>
+						<li>Export is missing or deliberately incomplete.</li>
+					</ul>
+				</div>
+				<div class="col">
+					<p class="col-label">Paid, user-owned</p>
+					<h3>RSS reader</h3>
+					<ul>
+						<li>Optimises read-then-leave — the user's actual goal.</li>
+						<li>Surfacing is chronological by default; rules are user-defined.</li>
+						<li>"Mark all read" is a first-class action, not a hidden one.</li>
+						<li>OPML import and export are core, not afterthoughts.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide-footer">
+				<span class="deck-title">Humane technology · Strange Loop 2026</span>
+				<span class="counter">04 / 06</span>
+			</div>
+		</section>
+
+		<!-- 5 — COMPARE — table variant -->
+		<section class="slide is-compare" data-screen-label="05 Table">
+			<p class="eyebrow">Tells</p>
+			<h2>What to look for when you can't see the contract.</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Tell</th>
+						<th>Aligned</th>
+						<th>Extractive</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cancellation</td>
+						<td>One click, in the same place as sign-up.</td>
+						<td>Buried, phone-only, or "talk to a specialist".</td>
+					</tr>
+					<tr>
+						<td>Export</td>
+						<td>All your data, in an open format, today.</td>
+						<td>A subset, in a proprietary format, on request.</td>
+					</tr>
+					<tr>
+						<td>Notifications</td>
+						<td>Off by default, granular controls.</td>
+						<td>On by default, bundled toggles.</td>
+					</tr>
+					<tr>
+						<td>Pricing</td>
+						<td>Public, flat, paid by the user.</td>
+						<td>Hidden, tiered, paid by a third party.</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="slide-footer">
+				<span class="deck-title">Humane technology · Strange Loop 2026</span>
+				<span class="counter">05 / 06</span>
+			</div>
+		</section>
+
+		<!-- 6 — PROSE — closing -->
+		<section class="slide is-prose" data-screen-label="06 Closing">
+			<p class="eyebrow">In closing</p>
+			<h2>Designers don't choose the business model. But we choose the defaults.</h2>
+			<div class="body">
+				<p>Most of the difference between an aligned product and an extractive one shows up in defaults — what's on, what's off, what's one click and what's three. We don't always get to pick the contract. We almost always get to pick the defaults.</p>
+				<p>Pick like someone will live inside the result.</p>
+			</div>
+			<div class="slide-footer">
+				<span class="deck-title">Humane technology · Strange Loop 2026</span>
+				<span class="counter">06 / 06</span>
+			</div>
+		</section>
+
+	</deck-stage>
+
+	<script src="../_lib/deck-stage.js"></script>
+</body>
+</html>

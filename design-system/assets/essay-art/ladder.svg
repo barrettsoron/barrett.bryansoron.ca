@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 580" role="img" aria-labelledby="ladder-title ladder-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-width:600px;margin:2.5rem auto">
+&#x9;<title id="ladder-title">The sovereignty ladder</title>
+&#x9;<desc id="ladder-desc">Eight rungs of digital sovereignty from the Avi Lewis leadership campaign, ordered from default SaaS dependency at the bottom to full refusal at the top. Higher rungs carry more sovereignty; the accent fades as the rungs descend.</desc>
+
+&#x9;<defs>
+&#x9;&#x9;<linearGradient id="ladder-upright" x1="0" y1="0" x2="0" y2="1">
+&#x9;&#x9;&#x9;<stop offset="0%" stop-color="#10b981" stop-opacity="0.95"></stop>
+&#x9;&#x9;&#x9;<stop offset="100%" stop-color="#0a8d65" stop-opacity="0.18"></stop>
+&#x9;&#x9;</linearGradient>
+&#x9;</defs>
+
+&#x9;
+&#x9;<text x="16" y="30" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" font-weight="700" letter-spacing="2">THE SOVEREIGNTY LADDER</text>
+&#x9;<text x="584" y="30" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">↑ more sovereign</text>
+
+&#x9;
+&#x9;<line x1="88" y1="52" x2="88" y2="536" stroke="url(#ladder-upright)" stroke-width="2"></line>
+
+&#x9;
+&#x9;<line x1="64" y1="76" x2="88" y2="76" stroke="#10b981" stroke-width="2"></line>
+&#x9;<text x="54" y="80" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" letter-spacing="0.5">08</text>
+&#x9;<text x="104" y="74" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Refusal</text>
+&#x9;<text x="104" y="94" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">NationBuilder, walked away entirely.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="136" x2="88" y2="136" stroke="#10b981" stroke-width="2" stroke-opacity="0.88"></line>
+&#x9;<text x="54" y="140" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.88" letter-spacing="0.5">07</text>
+&#x9;<text x="104" y="134" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Owned code</text>
+&#x9;<text x="104" y="154" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">The candidate&#39;s Astro site — ours to run.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="196" x2="88" y2="196" stroke="#10b981" stroke-width="2" stroke-opacity="0.76"></line>
+&#x9;<text x="54" y="200" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.76" letter-spacing="0.5">06</text>
+&#x9;<text x="104" y="194" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">FOSS tested, receipts kept</text>
+&#x9;<text x="104" y="214" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">Operational grounds, not philosophical.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="256" x2="88" y2="256" stroke="#10b981" stroke-width="2" stroke-opacity="0.64"></line>
+&#x9;<text x="54" y="260" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.64" letter-spacing="0.5">05</text>
+&#x9;<text x="104" y="254" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Paid partnership</text>
+&#x9;<text x="104" y="274" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">solidarity.tech, with active co-development.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="316" x2="88" y2="316" stroke="#10b981" stroke-width="2" stroke-opacity="0.52"></line>
+&#x9;<text x="54" y="320" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.56" letter-spacing="0.5">04</text>
+&#x9;<text x="104" y="314" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Architectural segregation</text>
+&#x9;<text x="104" y="334" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">PII fenced off, AI kept at the edges.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="376" x2="88" y2="376" stroke="#10b981" stroke-width="2" stroke-opacity="0.44"></line>
+&#x9;<text x="54" y="380" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.52" letter-spacing="0.5">03</text>
+&#x9;<text x="104" y="374" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Human-enforced discipline</text>
+&#x9;<text x="104" y="394" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">A creative director&#39;s held line.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="436" x2="88" y2="436" stroke="#10b981" stroke-width="2" stroke-opacity="0.36"></line>
+&#x9;<text x="54" y="440" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.48" letter-spacing="0.5">02</text>
+&#x9;<text x="104" y="434" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Change management</text>
+&#x9;<text x="104" y="454" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">No tool solves this.</text>
+
+&#x9;
+&#x9;<line x1="64" y1="496" x2="88" y2="496" stroke="#10b981" stroke-width="2" stroke-opacity="0.28"></line>
+&#x9;<text x="54" y="500" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" fill-opacity="0.44" letter-spacing="0.5">01</text>
+&#x9;<text x="104" y="494" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="15" font-weight="700" fill="#ededed" letter-spacing="-0.2">Accreted core</text>
+&#x9;<text x="104" y="514" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="13" font-style="italic" fill="#8a8a92">Google · Asana · Zoom · Canva — eyes open.</text>
+
+&#x9;
+&#x9;<text x="584" y="560" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">↓ default SaaS dependency</text>
+</svg>
