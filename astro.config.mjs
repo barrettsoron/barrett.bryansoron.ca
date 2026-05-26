@@ -16,5 +16,6 @@ export default defineConfig({
 	},
 	redirects: {
 		'/notes/accelerators-not-planners': '/notes/vibe-governing-comes-for-your-sidewalk',
+		'/essays/the-word-for-survival': '/essays/survival-is-affordable',
 	},
 });
