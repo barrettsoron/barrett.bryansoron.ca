@@ -2,6 +2,7 @@
 title: Survival is Affordable
 date: 2026-05-26
 draft: false
+image: /og/survival-is-affordable.png
 description: The BC NDP and the federal Liberals recoded climate action as a cost working people cannot bear. A Vancouver mayor just read their own words back to them while dismantling a gas ban.
 ---
 

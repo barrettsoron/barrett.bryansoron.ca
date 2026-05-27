@@ -19,7 +19,7 @@ const fmt = (d: Date) => d.toISOString().slice(0, 10);
 const tocHeadings = headings.filter((h) => h.depth === 2 || h.depth === 3);
 ---
 
-<Base title={entry.data.title} description={entry.data.description}>
+<Base title={entry.data.title} description={entry.data.description} image={entry.data.image}>
 	<article>
 		<h1>{entry.data.title}</h1>
 		<p class="post-meta">
