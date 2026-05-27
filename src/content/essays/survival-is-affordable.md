@@ -3,7 +3,7 @@ title: Survival is Affordable
 date: 2026-05-26
 draft: false
 image: /og/survival-is-affordable.png
-description: The BC NDP and the federal Liberals recoded climate action as a cost working people cannot bear. A Vancouver mayor just read their own words back to them while dismantling a gas ban.
+description: The BC NDP and the federal Liberals recoded climate action as a cost working people cannot bear. The Vancouver mayor just read their own words back to them while dismantling a gas ban.
 ---
 
 On May 21, Vancouver city council voted seven to four to undo one of the country's strongest municipal climate policies, and the mayor who moved it barely had to make an argument of his own. He borrowed one. Ken Sim's motion carries the title "[Eliminating Regulatory Barriers to Housing Affordability Through Alignment with the Provincial Building Code](https://council.vancouver.ca/20260520/documents/cfscmotion8.pdf)." Buried in its eighth WHEREAS clause is the tell: "In 2025, the federal consumer carbon tax and provincial carbon tax were removed, including for natural gas residential customers, highlighting a material change in the economic context where Energize Vancouver was initially adopted."
