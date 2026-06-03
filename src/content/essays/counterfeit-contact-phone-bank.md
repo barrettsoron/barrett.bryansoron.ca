@@ -1,8 +1,9 @@
 ---
 title: Counterfeit contact comes for the phone bank
-date: 2026-05-24
+date: 2026-06-03
 description: AI calling fakes the human voice and the phone bank that made organizers.
 draft: false
+image: /og/counterfeit-contact-phone-bank.png
 ---
 
 > "So if we're calling a Chinese person that speaks Mandarin, we can have an AI that sounds Chinese over the phone and can speak Mandarin."

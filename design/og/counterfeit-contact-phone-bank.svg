@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b0b0d"/>
+  <!-- faint section-mark watermark, echoing the site's divider ornament -->
+  <text x="1180" y="540" font-family="Georgia, 'Noto Serif', serif" font-size="560" fill="#0a8d65" fill-opacity="0.10" text-anchor="end">§</text>
+  <!-- top accent rule -->
+  <rect x="80" y="98" width="64" height="5" fill="#10b981"/>
+  <!-- kicker -->
+  <text x="80" y="150" font-family="Helvetica, Arial, sans-serif" font-size="26" letter-spacing="7" fill="#10b981">ESSAY</text>
+  <!-- title (two lines) -->
+  <text x="76" y="296" font-family="Georgia, 'Noto Serif', serif" font-size="76" font-weight="700" fill="#ededed">Counterfeit contact</text>
+  <text x="76" y="384" font-family="Georgia, 'Noto Serif', serif" font-size="76" font-weight="700" fill="#ededed">comes for the phone bank</text>
+  <!-- dek -->
+  <text x="80" y="452" font-family="Helvetica, Arial, sans-serif" font-size="31" fill="#8a8a92">Fake the voice, lose the phone bank that made organizers.</text>
+  <!-- byline + url -->
+  <text x="80" y="560" font-family="Helvetica, Arial, sans-serif" font-size="27" letter-spacing="1" fill="#8a8a92">June 2026</text>
+  <text x="1120" y="560" font-family="Helvetica, Arial, sans-serif" font-size="27" letter-spacing="1" fill="#10b981" text-anchor="end">barrett.bryansoron.ca</text>
+</svg>
