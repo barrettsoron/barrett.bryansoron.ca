@@ -2,7 +2,7 @@
 title: "Using AI in the Data Centre Fight: A Memo for Organizers"
 date: 2026-05-01
 description: An argument is circulating in the coalitions working to stop data centre expansion. This is why it's wrong, and why it matters.
-draft: false
+draft: true
 ---
 
 An argument is circulating in the coalitions working to stop data centre expansion: using any AI tool, even a language model to help process a permit application, is a moral betrayal of the fight. The logic seems clean. You can't fight the expansion of AI infrastructure while using AI. You're funding the thing you're fighting.
