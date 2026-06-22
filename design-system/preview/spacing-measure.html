@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Layout — Measure</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #0b0b0d; font-family: var(--font-mono); }
+  .frame { position: relative; border: 1px dashed #24242a; border-radius: 2px; height: 110px; }
+  .col {
+    position: absolute; top: 8px; bottom: 8px;
+    left: 50%; transform: translateX(-50%);
+    width: min(36rem, 95%);
+    background: rgba(16, 185, 129, 0.10);
+    border-left: 1px solid #0a8d65;
+    border-right: 1px solid #0a8d65;
+  }
+  .lbl { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: #0b0b0d; padding: 0 8px; font-size: 11px; color: #10b981; letter-spacing: 0.16em; text-transform: uppercase; }
+  .legend { display: flex; gap: 18px; margin-top: 12px; color: #8a8a92; font-size: 12px; font-feature-settings: "tnum" 1; }
+  .legend strong { color: #ededed; font-weight: 700; }
+</style>
+</head>
+<body>
+<div class="frame">
+  <div class="col"></div>
+  <span class="lbl">--measure · 36rem</span>
+</div>
+<div class="legend">
+  <span><strong>576px</strong> @ 17px root</span>
+  <span><strong>3rem</strong> top · <strong>6rem</strong> bottom</span>
+  <span>side gutter <strong>1.5rem</strong></span>
+  <span>one column, never wider</span>
+</div>
+</body>
+</html>

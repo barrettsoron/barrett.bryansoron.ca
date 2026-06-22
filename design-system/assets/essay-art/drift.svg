@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="drift-title drift-desc" preserveAspectRatio="xMidYMid meet" style="display:block;width:100%;height:auto;max-width:600px;margin:2.5rem auto">
+&#x9;<title id="drift-title">Platform drift — September 2025 through March 2026</title>
+&#x9;<desc id="drift-desc">A timeline of generative-AI features that shipped into four tools (Canva, Zoom, Asana, Google Workspace) during the Avi Lewis leadership campaign, plus the Otter.ai class action filed just before the window opens. Dots mark discrete platform events; the Google row shows an ambient band representing gradual default rollout of Gemini across Workspace.</desc>
+
+&#x9;<defs>
+&#x9;&#x9;<linearGradient id="drift-ambient" x1="0" y1="0" x2="1" y2="0">
+&#x9;&#x9;&#x9;<stop offset="0%" stop-color="#10b981" stop-opacity="0.10"></stop>
+&#x9;&#x9;&#x9;<stop offset="100%" stop-color="#10b981" stop-opacity="0.26"></stop>
+&#x9;&#x9;</linearGradient>
+&#x9;</defs>
+
+&#x9;
+&#x9;<text x="14" y="28" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="11" fill="#10b981" font-weight="700" letter-spacing="2">PLATFORM DRIFT</text>
+&#x9;<text x="586" y="28" text-anchor="end" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="1">sept 2025 → mar 2026</text>
+
+&#x9;
+&#x9;<line x1="14" y1="48" x2="586" y2="48" stroke="#24242a" stroke-width="1"></line>
+&#x9;<text x="14" y="68" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="9.5" fill="#8a8a92" letter-spacing="1.5" font-weight="700">AUG 15, 2025  ·  PRE-WINDOW</text>
+&#x9;<text x="14" y="86" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="12.5" font-style="italic" fill="#ededed">Otter.ai class action filed (Brewer v. Otter) — Notetaker auto-joined meetings without consent.</text>
+&#x9;<line x1="14" y1="102" x2="586" y2="102" stroke="#24242a" stroke-width="1"></line>
+
+&#x9;
+&#x9;<text x="125" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">SEP</text>
+&#x9;<text x="195" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">OCT</text>
+&#x9;<text x="265" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">NOV</text>
+&#x9;<text x="335" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">DEC</text>
+&#x9;<text x="405" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">JAN</text>
+&#x9;<text x="475" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">FEB</text>
+&#x9;<text x="545" y="122" text-anchor="middle" font-family="&#39;Noto Sans Mono&#39;, ui-monospace, monospace" font-size="10" fill="#8a8a92" letter-spacing="2" font-weight="700">MAR</text>
+
+&#x9;
+&#x9;<line x1="14" y1="132" x2="586" y2="132" stroke="#24242a" stroke-width="1"></line>
+&#x9;<line x1="14" y1="172" x2="586" y2="172" stroke="#24242a" stroke-width="1"></line>
+&#x9;<line x1="14" y1="212" x2="586" y2="212" stroke="#24242a" stroke-width="1"></line>
+&#x9;<line x1="14" y1="252" x2="586" y2="252" stroke="#24242a" stroke-width="1"></line>
+&#x9;<line x1="14" y1="302" x2="586" y2="302" stroke="#24242a" stroke-width="1"></line>
+
+&#x9;
+&#x9;<line x1="90" y1="132" x2="90" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="160" y1="132" x2="160" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="230" y1="132" x2="230" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="300" y1="132" x2="300" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="370" y1="132" x2="370" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="440" y1="132" x2="440" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="510" y1="132" x2="510" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+&#x9;<line x1="580" y1="132" x2="580" y2="302" stroke="#1a1a20" stroke-width="1"></line>
+
+&#x9;
+&#x9;<text x="82" y="156" text-anchor="end" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Canva</text>
+&#x9;<text x="82" y="196" text-anchor="end" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Zoom</text>
+&#x9;<text x="82" y="236" text-anchor="end" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Asana</text>
+&#x9;<text x="82" y="281" text-anchor="end" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#ededed">Google</text>
+
+&#x9;
+&#x9;<circle cx="108" cy="152" r="4" fill="#10b981"></circle>
+&#x9;<text x="118" y="156" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Nano Banana rollout</text>
+
+&#x9;<circle cx="265" cy="152" r="4" fill="#10b981"></circle>
+&#x9;<text x="275" y="156" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Nano Banana Pro</text>
+
+&#x9;
+&#x9;<circle cx="132" cy="192" r="4" fill="#10b981"></circle>
+&#x9;<text x="142" y="196" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Companion announced</text>
+
+&#x9;<circle cx="335" cy="192" r="4" fill="#10b981"></circle>
+&#x9;<text x="345" y="196" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Companion GA</text>
+
+&#x9;
+&#x9;<circle cx="152" cy="232" r="4" fill="#10b981"></circle>
+&#x9;<text x="162" y="236" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">AI Teammates beta</text>
+
+&#x9;<circle cx="285" cy="232" r="4" fill="#10b981"></circle>
+&#x9;<text x="295" y="236" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Fall release</text>
+
+&#x9;<circle cx="475" cy="232" r="4" fill="#10b981"></circle>
+&#x9;<text x="485" y="236" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11.5" font-weight="700" fill="#ededed">Winter release</text>
+
+&#x9;
+&#x9;<rect x="90" y="264" width="490" height="26" fill="url(#drift-ambient)"></rect>
+&#x9;<text x="335" y="281" text-anchor="middle" font-family="&#39;BC Sans&#39;, -apple-system, sans-serif" font-size="11" font-weight="700" fill="#ededed" letter-spacing="1.5">GRADUAL GEMINI DEFAULT ROLLOUT</text>
+
+&#x9;
+&#x9;<text x="14" y="334" font-family="&#39;Noto Serif&#39;, Georgia, serif" font-size="12" font-style="italic" fill="#8a8a92">Drift by defaults, drip by drip — the stack we&#39;d started with became something else.</text>
+</svg>

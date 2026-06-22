@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Spacing — Rules &amp; radii</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #0b0b0d; }
+  .grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 20px; align-items: start; }
+  .blk h4 { font-family: var(--font-mono); font-size: 11px; color: #8a8a92; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 10px; font-weight: 700; }
+  .rules > div { display: grid; grid-template-columns: 110px 1fr; align-items: center; gap: 12px; padding: 6px 0; }
+  .rules .lbl { font-family: var(--font-mono); font-size: 12px; color: #ededed; font-feature-settings: "tnum" 1; }
+  .rule-hair    { height: 0; border-bottom: 1px solid #24242a; }
+  .rule-dim     { height: 0; border-bottom: 1px solid #0a8d65; }
+  .rule-2px     { height: 0; border-bottom: 2px solid #0a8d65; }
+  .rule-caveat  { height: 0; border-bottom: 2px solid #10b981; }
+
+  .radii { display: flex; gap: 10px; flex-wrap: wrap; }
+  .r {
+    width: 64px; height: 36px;
+    background: #121216;
+    border: 1px solid #24242a;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 11px; color: #ededed;
+  }
+  .r-1 { border-radius: 2px; }
+  .r-2 { border-radius: 3px; }
+  .r-3 { border-radius: 4px; }
+  .legend { font-family: var(--font-mono); font-size: 11px; color: #8a8a92; margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="grid">
+  <div class="blk rules">
+    <h4>Rules</h4>
+    <div><span class="lbl">1px border</span><div class="rule-hair"></div></div>
+    <div><span class="lbl">1px accent-dim</span><div class="rule-dim"></div></div>
+    <div><span class="lbl">2px accent-dim</span><div class="rule-2px"></div></div>
+    <div><span class="lbl">2px caveat</span><div class="rule-caveat"></div></div>
+  </div>
+  <div class="blk">
+    <h4>Radii</h4>
+    <div class="radii">
+      <div class="r r-1">2px</div>
+      <div class="r r-2">3px</div>
+      <div class="r r-3">4px</div>
+    </div>
+    <p class="legend">No shadows. No glass. Nothing soft.</p>
+  </div>
+</div>
+</body>
+</html>

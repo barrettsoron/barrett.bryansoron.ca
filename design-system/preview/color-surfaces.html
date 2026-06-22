@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Color — Surfaces</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 18px 22px; background: #16161a; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .sw {
+    border: 1px solid var(--border);
+    border-radius: var(--r-3);
+    padding: 14px 14px 12px;
+    display: flex; flex-direction: column; gap: 28px;
+    min-height: 116px;
+    justify-content: space-between;
+  }
+  .sw .label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+  .sw .name { font-weight: 700; color: var(--text); font-size: 14px; letter-spacing: -0.01em; }
+  .sw .hex  { font-family: var(--font-mono); font-size: 13px; color: var(--text); font-feature-settings: "tnum" 1; }
+  .sw .meta { display: flex; justify-content: space-between; align-items: baseline; }
+  .sw-bg      { background: #0b0b0d; }
+  .sw-surface { background: #121216; }
+  .sw-border  { background: #1a1a1f; }
+  .sw-border .swatch-rule { height: 1px; background: var(--border); margin-top: 6px; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="sw sw-bg">
+    <p class="label">Page</p>
+    <div class="meta"><span class="name">--bg</span><span class="hex">#0B0B0D</span></div>
+  </div>
+  <div class="sw sw-surface">
+    <p class="label">Surface</p>
+    <div class="meta"><span class="name">--surface</span><span class="hex">#121216</span></div>
+  </div>
+  <div class="sw sw-border">
+    <p class="label">Border</p>
+    <div>
+      <div style="height:1px;background:#24242a;margin-bottom:8px"></div>
+      <div class="meta"><span class="name">--border</span><span class="hex">#24242A</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

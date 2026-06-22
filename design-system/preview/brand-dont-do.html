@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Brand — Don't / do</title>
+<link rel="stylesheet" href="../colors_and_type.css" />
+<style>
+  body { max-width: none; padding: 16px 22px; background: #0b0b0d; font-family: var(--font-sans); color: #ededed; }
+  .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .col { padding: 12px 14px; border: 1px solid #24242a; border-radius: 4px; background: #121216; }
+  .col h4 { margin: 0 0 8px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 700; }
+  .dont h4 { color: #8a8a92; }
+  .do   h4 { color: #10b981; }
+  ul { margin: 0; padding-left: 14px; }
+  li { font-size: 13px; line-height: 1.5; margin: 3px 0; color: #ededed; }
+  .dont li::marker { color: #8a8a92; }
+  .do   li::marker { color: #0a8d65; }
+</style>
+</head>
+<body>
+<div class="row">
+  <div class="col dont">
+    <h4>Avoid</h4>
+    <ul>
+      <li>Gradients, glassmorphism, AI sparkles</li>
+      <li>Emoji as iconography</li>
+      <li>"Click here", "Stay tuned", "Game-changer"</li>
+      <li>Rounded soft cards with coloured left rule</li>
+      <li>Sentence-end exclamation marks</li>
+    </ul>
+  </div>
+  <div class="col do">
+    <h4>Reach for</h4>
+    <ul>
+      <li>One column, generous space, hairline rules</li>
+      <li>Sentence case, em-dashes, ISO dates</li>
+      <li>§ folio between sections</li>
+      <li>Mono uppercase eyebrows on labels</li>
+      <li>Accent green as a budget, not a palette</li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

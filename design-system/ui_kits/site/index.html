@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>barrett — site UI kit</title>
+<link rel="icon" type="image/svg+xml" href="../../assets/favicon.svg" />
+<link rel="stylesheet" href="../../colors_and_type.css" />
+<style>
+  /* Component CSS lifted from upstream global.css, kept local to the kit
+     so colors_and_type.css can stay token-only. */
+
+  body { padding: 3rem 1.5rem 6rem; }
+
+  .skip-link {
+    position: absolute; left: 0.5rem; top: 0.5rem;
+    background: var(--accent); color: var(--bg);
+    padding: 0.5rem 0.75rem; text-decoration: none; font-weight: 700;
+    border-radius: 2px;
+    transform: translateY(-200%); transition: transform 0.15s ease;
+    z-index: 10;
+  }
+  .skip-link:focus { transform: translateY(0); }
+
+  header {
+    display: flex; justify-content: space-between; align-items: baseline;
+    gap: 1.5rem; margin-bottom: 4rem; flex-wrap: wrap;
+  }
+  header .site {
+    color: var(--accent); font-weight: 700; font-size: 1.0625rem;
+    letter-spacing: -0.01em; text-decoration: none; border-bottom: none;
+  }
+  header .site:hover { color: var(--text); }
+  nav { display: flex; gap: 1.5rem; font-size: 0.9375rem; }
+  nav a {
+    color: var(--muted); text-decoration: none; border-bottom: none;
+    padding: 0.5rem 0; min-height: 44px; display: inline-flex; align-items: center;
+  }
+  nav a:hover { color: var(--text); }
+  nav a[aria-current="page"] { color: var(--accent); }
+  nav a.nav-dev { color: var(--accent-dim); font-style: italic; font-size: 0.8125rem; }
+  nav a.nav-dev::before { content: "· "; font-style: normal; color: var(--border); }
+  nav a.nav-dev:hover { color: var(--accent); }
+
+  main { min-height: 60vh; }
+
+  /* Lists */
+  .posts { list-style: none; padding: 0; margin: 2rem 0; }
+  .posts li {
+    display: flex; gap: 1.25rem; align-items: baseline;
+    padding: 0.625rem 0; border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+  .posts time {
+    color: var(--accent-dim); font-size: 0.8125rem; flex-shrink: 0;
+    min-width: 5.25rem; letter-spacing: -0.02em;
+  }
+  .posts a { text-decoration: none; color: var(--text); }
+  .posts a:hover { color: var(--accent); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 0.22em; }
+  @media (min-width: 1000px) {
+    .posts--hanging { padding-left: 0; }
+    .posts--hanging li { display: block; padding-left: 0; }
+    .posts--hanging time {
+      position: absolute; left: -7rem; top: 0.625rem;
+      width: 6rem; text-align: right; min-width: 0;
+    }
+  }
+
+  .post-meta {
+    color: var(--muted); font-size: 0.8125rem; margin-bottom: 2rem;
+    font-family: var(--font-mono); letter-spacing: -0.01em;
+  }
+  .post-meta time { color: var(--accent-dim); }
+
+  /* TOC */
+  .toc {
+    margin: 2.75rem 0 3.5rem; padding: 0 0 1rem;
+    border-bottom: 1px solid var(--accent-dim);
+    font-size: 0.9375rem; position: relative;
+  }
+  .toc-label {
+    display: flex; align-items: center; gap: 0.875rem;
+    margin: 0 0 0.75rem;
+    font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700;
+    line-height: 1.45; text-transform: uppercase; letter-spacing: 0.18em;
+    color: var(--accent);
+  }
+  .toc-label::after { content: ""; flex: 1; height: 1px; background: var(--accent-dim); align-self: center; }
+  .toc-list { list-style: none; padding: 0; margin: 0; }
+  .toc-item { margin: 0; line-height: 1.45; }
+  .toc-item a { display: block; padding: 0.3rem 0; color: var(--text); text-decoration: none; }
+  .toc-item a:hover { color: var(--accent); }
+  .toc-item--sub { position: relative; padding-left: 1.5rem; font-style: italic; }
+  .toc-item--sub a { color: var(--muted); }
+  .toc-item--sub::before {
+    content: ""; position: absolute; left: 0; top: 0.95rem;
+    width: 0.75rem; height: 1px; background: var(--accent-dim);
+  }
+  @media (min-width: 1100px) {
+    .toc { padding-top: 1rem; border-top: 1px solid var(--accent-dim); }
+    .toc-label {
+      position: absolute; left: -8rem; top: 1.3rem;
+      width: 6.5rem; margin: 0; display: block; text-align: right;
+    }
+    .toc-label::after { display: none; }
+  }
+
+  /* Admonitions */
+  .admonition {
+    margin: 2.25rem 0; padding-top: 0.75rem;
+    border-top: 2px solid var(--border);
+    font-size: 0.9375rem; font-family: var(--font-sans);
+  }
+  .admonition-label {
+    display: block; margin: 0 0 0.45rem;
+    font-family: var(--font-mono); font-size: 0.6875rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.18em; color: var(--muted);
+  }
+  .admonition p:last-child { margin-bottom: 0; }
+  .admonition.note { border-top-color: #5a8bd6; }
+  .admonition.note .admonition-label { color: #8ab2ea; }
+  .admonition.tip { border-top-color: #6aab6a; }
+  .admonition.tip .admonition-label { color: #8ccf8c; }
+  .admonition.caveat { border-top-color: var(--accent); }
+  .admonition.caveat .admonition-label { color: var(--accent); }
+
+  /* Callout */
+  .callout {
+    margin: 2.5rem 0; padding: 1.75rem 1.5rem;
+    border-top: 1px solid var(--accent-dim);
+    border-bottom: 1px solid var(--accent-dim);
+    text-align: center; font-size: 1.0625rem;
+    font-family: var(--font-serif); font-style: italic; color: var(--text);
+  }
+  .callout p { margin: 0; }
+
+  /* Subscribe form */
+  .embeddable-buttondown-form {
+    display: flex; flex-wrap: wrap; gap: 0.75rem;
+    margin: 2.5rem 0; padding: 1.5rem;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 4px;
+  }
+  .embeddable-buttondown-form label {
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+  }
+  .embeddable-buttondown-form input[type="email"] {
+    flex: 1 1 18rem; padding: 0.6rem 0.75rem;
+    background: var(--bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 3px; font: inherit;
+  }
+  .embeddable-buttondown-form button {
+    padding: 0.6rem 1.25rem;
+    background: var(--accent); color: var(--bg);
+    border: none; border-radius: 3px;
+    font: inherit; font-weight: 600; cursor: pointer;
+  }
+  .embeddable-buttondown-form button:hover { background: var(--accent-dim); }
+
+  /* Footer */
+  footer {
+    margin-top: 6rem; padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    color: var(--text); font-size: 0.9375rem;
+  }
+  .footer-nav {
+    display: flex; flex-wrap: wrap; gap: 1.5rem;
+    padding-bottom: 2rem; border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem; font-size: 0.9375rem;
+  }
+  .footer-nav a { color: var(--muted); text-decoration: none; padding: 0.25rem 0; }
+  .footer-nav a:hover { color: var(--text); }
+  .footer-contact { color: var(--text); margin: 0 0 2.5rem; max-width: 32rem; }
+  .footer-land {
+    margin: 0 0 1.25rem; padding-top: 1.25rem;
+    border-top: 1px solid var(--border);
+    color: var(--muted); font-size: 0.8125rem; line-height: 1.65; max-width: 32rem;
+  }
+  .footer-copyright {
+    margin: 0; color: var(--muted); font-size: 0.8125rem;
+    font-family: var(--font-mono); letter-spacing: -0.01em;
+  }
+
+  /* Kit demo: a tiny "route" pill (does not exist on the real site) */
+  .kit-banner {
+    position: fixed; right: 1rem; bottom: 1rem;
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--muted); padding: 6px 10px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 3px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div id="app"></div>
+  <div class="kit-banner" id="kit-banner">route: home</div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="Components.jsx"></script>
+  <script type="text/babel" src="Pages.jsx"></script>
+  <script type="text/babel" src="Content.jsx"></script>
+
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+
+    // Map a hash like "#essay/foo" → {route, slug}
+    function parseHash() {
+      const h = (location.hash || '#home').replace(/^#/, '');
+      const [route, slug] = h.split('/');
+      return { route: route || 'home', slug };
+    }
+
+    function App() {
+      const [{ route, slug }, setRoute] = useState(parseHash());
+      useEffect(() => {
+        const onHash = () => setRoute(parseHash());
+        window.addEventListener('hashchange', onHash);
+        return () => window.removeEventListener('hashchange', onHash);
+      }, []);
+
+      useEffect(() => {
+        const b = document.getElementById('kit-banner');
+        if (b) b.textContent = 'route: ' + route + (slug ? ' / ' + slug : '');
+        window.scrollTo(0, 0);
+      }, [route, slug]);
+
+      const openPost = (post) => {
+        const kind = post.toc !== undefined ? 'essay' : 'note';
+        location.hash = '#' + kind + '/' + post.slug;
+      };
+      const back = (to) => () => { location.hash = '#' + to; };
+
+      const nav = route === 'essays' || route === 'essay' ? 'essays'
+                : route === 'notes'  || route === 'note'  ? 'notes'
+                : route === 'about' ? 'about'
+                : 'notes';
+
+      let body;
+      if (route === 'home') {
+        body = <HomePage notes={NOTES} essays={ESSAYS} onOpen={openPost} />;
+      } else if (route === 'notes') {
+        body = <NotesIndex notes={NOTES} onOpen={openPost} />;
+      } else if (route === 'essays') {
+        body = <EssaysIndex essays={ESSAYS} onOpen={openPost} />;
+      } else if (route === 'about') {
+        body = <AboutPage />;
+      } else if (route === 'note') {
+        const p = NOTES.find(n => n.slug === slug) || NOTES[0];
+        body = <NotePage post={p} onBack={back('notes')} />;
+      } else if (route === 'essay') {
+        const p = ESSAYS.find(e => e.slug === slug) || ESSAYS[0];
+        body = <EssayPage post={p} onBack={back('essays')} />;
+      } else {
+        body = <HomePage notes={NOTES} essays={ESSAYS} onOpen={openPost} />;
+      }
+
+      return (
+        <React.Fragment>
+          <Header current={nav} />
+          {body}
+          <Footer />
+        </React.Fragment>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('app')).render(<App />);
+  </script>
+</body>
+</html>
