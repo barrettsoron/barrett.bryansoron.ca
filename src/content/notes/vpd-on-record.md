@@ -1,5 +1,5 @@
 ---
-title: VPD now on record: US drones are monitoring Vancouver protests
+title: "VPD now on record: US drones are monitoring Vancouver protests"
 date: 2026-06-22
 draft: false
 ---
