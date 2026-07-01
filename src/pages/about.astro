@@ -1,8 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { profilePage } from '../lib/schema';
+
+const schema = profilePage(Astro.site!);
 ---
 
-<Base title="About" description="About Barrett Bryan-Soron — political operator, systems builder, organizer, and trainer based in Vancouver.">
+<Base title="About" description="About Barrett Bryan-Soron — political operator, systems builder, organizer, and trainer based in Vancouver." ogType="profile">
+	<JsonLd slot="head" data={schema} />
 	<article>
 		<h1>About</h1>
 
