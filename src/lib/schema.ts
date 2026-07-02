@@ -59,7 +59,6 @@ export function article({ site, path, title, description, datePublished, image, 
 		...(image ? { image: new URL(image, site).toString() } : {}),
 		url,
 		mainEntityOfPage: url,
-		author: { '@id': personId(site), name: PERSON_NAME },
-		publisher: { '@id': personId(site), name: PERSON_NAME },
+		author: { '@type': 'Person', '@id': personId(site), name: PERSON_NAME, url: new URL('/about', site).toString() },
 	};
 }
