@@ -1,5 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { article } from '../../lib/schema';
 import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
@@ -16,9 +18,18 @@ type Props = { entry: CollectionEntry<'notes'> };
 const { entry } = Astro.props;
 const { Content } = await render(entry);
 const fmt = (d: Date) => d.toISOString().slice(0, 10);
+
+const schema = article({
+	site: Astro.site!,
+	path: `/notes/${entry.id}`,
+	title: entry.data.title,
+	datePublished: entry.data.date,
+	type: 'BlogPosting',
+});
 ---
 
-<Base title={entry.data.title}>
+<Base title={entry.data.title} ogType="article">
+	<JsonLd slot="head" data={schema} />
 	<article>
 		<h1>{entry.data.title}</h1>
 		<p class="post-meta">
