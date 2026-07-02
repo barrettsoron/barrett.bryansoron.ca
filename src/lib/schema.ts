@@ -2,7 +2,7 @@ const PERSON_NAME = 'Barrett Bryan-Soron';
 const PERSON_ALTERNATE_NAMES = ['Mike Soron', 'Michael Barrett Soron', 'Barrett Soron'];
 const PERSON_JOB_TITLE = 'Political organizer and campaign strategist';
 const PERSON_DESCRIPTION =
-	'Political organizer in Vancouver building durable infrastructure for eco-socialist movement and party work in Canada.';
+	'Political organizer in Vancouver building durable infrastructure for ecosocialist movement and party work in Canada.';
 const PERSON_SAME_AS = [
 	'https://bsky.app/profile/mbbsoron.bsky.social',
 	'https://www.linkedin.com/in/mbbsoron/',
@@ -59,7 +59,7 @@ export function article({ site, path, title, description, datePublished, image, 
 		...(image ? { image: new URL(image, site).toString() } : {}),
 		url,
 		mainEntityOfPage: url,
-		author: { '@id': personId(site) },
-		publisher: { '@id': personId(site) },
+		author: { '@id': personId(site), name: PERSON_NAME },
+		publisher: { '@id': personId(site), name: PERSON_NAME },
 	};
 }
