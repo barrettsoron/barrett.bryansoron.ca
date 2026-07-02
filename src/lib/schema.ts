@@ -1,8 +1,8 @@
 const PERSON_NAME = 'Barrett Bryan-Soron';
 const PERSON_ALTERNATE_NAMES = ['Mike Soron', 'Michael Barrett Soron', 'Barrett Soron'];
-const PERSON_JOB_TITLE = 'Political operator';
+const PERSON_JOB_TITLE = 'Political organizer and campaign strategist';
 const PERSON_DESCRIPTION =
-	'Political operator in Vancouver building durable infrastructure for eco-socialist movement and party work in Canada.';
+	'Political organizer in Vancouver building durable infrastructure for eco-socialist movement and party work in Canada.';
 const PERSON_SAME_AS = [
 	'https://bsky.app/profile/mbbsoron.bsky.social',
 	'https://www.linkedin.com/in/mbbsoron/',

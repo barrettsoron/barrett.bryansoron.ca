@@ -27,7 +27,7 @@ export async function GET(context) {
 	return rss({
 		title: 'Barrett Bryan-Soron',
 		description:
-			'Political operator in Vancouver. Building durable infrastructure for eco-socialist movement and party work in Canada. Writing about craft, technology, and the harder work the left has to do now.',
+			'Political organizer in Vancouver. Building durable infrastructure for eco-socialist movement and party work in Canada. Writing about craft, technology, and the harder work the left has to do now.',
 		site: context.site,
 		items,
 	});
