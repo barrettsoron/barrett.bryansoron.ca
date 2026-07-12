@@ -15,7 +15,7 @@ jobs:
     steps:
       - name: Detect visual-path changes
         id: changes
-        uses: dorny/paths-filter@d1c1ffe0248fe513906c8e24db8ea791d46f8590 # v3
+        uses: dorny/paths-filter@7b450fff21473bca461d4b92ce414b9d0420d706 # v4.0.2
         with:
           filters: |
             visual:
@@ -28,7 +28,7 @@ jobs:
 
       - name: Ensure label exists
         if: steps.changes.outputs.visual == 'true'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             try {
@@ -45,7 +45,7 @@ jobs:
 
       - name: Apply label and sticky comment
         if: steps.changes.outputs.visual == 'true'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const pr = context.payload.pull_request.number;
@@ -96,7 +96,7 @@ jobs:
 
       - name: Remove label when no visual changes remain
         if: steps.changes.outputs.visual == 'false'
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7
+        uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
         with:
           script: |
             const pr = context.payload.pull_request.number;
