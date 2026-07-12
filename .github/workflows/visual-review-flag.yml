@@ -57,19 +57,21 @@ jobs:
               labels: ['needs-visual-review'],
             });
             const marker = '<!-- visual-review-bot -->';
-            const body = `${marker}
-**Visual review needed.** This PR touches paths whose effect can only be judged by previewing the rendered site (styles, layouts, components, page templates, public assets, or Astro config).
-
-Preview locally on a laptop before merging:
-
-\`\`\`
-git fetch origin
-git checkout ${branch}
-pnpm install
-pnpm dev
-\`\`\`
-
-Open http://localhost:4321 and confirm the change renders as expected.`;
+            const body = [
+              marker,
+              '**Visual review needed.** This PR touches paths whose effect can only be judged by previewing the rendered site (styles, layouts, components, page templates, public assets, or Astro config).',
+              '',
+              'Preview locally on a laptop before merging:',
+              '',
+              '```',
+              'git fetch origin',
+              `git checkout ${branch}`,
+              'pnpm install',
+              'pnpm dev',
+              '```',
+              '',
+              'Open http://localhost:4321 and confirm the change renders as expected.',
+            ].join('\n');
             const comments = await github.paginate(github.rest.issues.listComments, {
               owner: context.repo.owner,
               repo: context.repo.repo,
