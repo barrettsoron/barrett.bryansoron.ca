@@ -6,7 +6,11 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://barrett.bryansoron.ca',
 	output: 'static',
-	integrations: [sitemap()],
+	integrations: [
+		sitemap({
+			filter: (page) => !page.includes('/styleguide'),
+		}),
+	],
 	build: {
 		inlineStylesheets: 'never',
 	},
