@@ -40,6 +40,9 @@ jobs:
             --exclude 'xcancel\.com'
             --exclude 'vancouver\.ca'
             --exclude 'nationalobserver\.com'
+            --exclude 'thetyee\.ca'
+            --exclude 'pivotlegal\.org'
+            --exclude 'iopscience\.iop\.org'
             --exclude 'barrett\.bryansoron\.ca/404/'
             'dist/**/*.html'
           output: ./lychee-report.md
