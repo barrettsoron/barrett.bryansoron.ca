@@ -6,7 +6,14 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
 	site: 'https://barrett.bryansoron.ca',
 	output: 'static',
-	integrations: [sitemap()],
+	integrations: [
+		sitemap({
+			filter: (page) => !page.includes('/styleguide'),
+		}),
+	],
+	build: {
+		inlineStylesheets: 'never',
+	},
 	// Dev-only: allow previewing the dev server over Tailscale (`tailscale serve` -> *.ts.net).
 	// Ignored by the static production build.
 	vite: {
