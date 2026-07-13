@@ -7,6 +7,9 @@ export default defineConfig({
 	site: 'https://barrett.bryansoron.ca',
 	output: 'static',
 	integrations: [sitemap()],
+	build: {
+		inlineStylesheets: 'never',
+	},
 	// Dev-only: allow previewing the dev server over Tailscale (`tailscale serve` -> *.ts.net).
 	// Ignored by the static production build.
 	vite: {
