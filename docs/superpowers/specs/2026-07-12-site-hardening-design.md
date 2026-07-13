@@ -68,7 +68,7 @@ stable upstream; refresh it opportunistically. Closes finding 7.
 ```
 default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:;
 connect-src 'self' https://barrettbryansoron.goatcounter.com;
-font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'
+font-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' https://buttondown.com
 ```
 
 Notes: JSON-LD blocks are non-executable, so `script-src 'self'` does not
@@ -79,7 +79,7 @@ default `build.inlineStylesheets: 'auto'` inlines small stylesheets, which
 `style-src 'self'` would block — set `inlineStylesheets: 'never'` in
 `astro.config.mjs` (one extra small CSS request; irrelevant at this size).
 The CSP must be verified against every page type (essay, note, styleguide,
-404) before merge, in dev tools with no violations.
+404) before merge, in dev tools with no violations. Runtime verification found the newsletter form posts to buttondown.com, so form-action additionally allows that origin.
 
 **2.4 404 page.** Add `src/pages/404.astro` using the Base layout — short
 message plus links home/essays/notes. Astro emits `404.html`, which GitHub
