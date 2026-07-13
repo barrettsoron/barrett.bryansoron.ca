@@ -28,7 +28,7 @@
     {
       "id": 12,
       "subject": "Task 4: Add Dependabot configuration",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Monthly grouped update PRs for npm and Actions; Dependabot maintains the SHA pins.\n\n**Files:**\n- Create: .github/dependabot.yml\n\n**Acceptance Criteria:**\n- Ecosystems npm and github-actions\n- Monthly schedule, one group per ecosystem\n\n**Verify:** file matches plan Task 4 YAML exactly\n\n**Steps:** Exact YAML in plan Task 4. Commit 'chore: add dependabot config - monthly grouped npm and actions updates'.\n\n```json:metadata\n{\"files\": [\".github/dependabot.yml\"], \"verifyCommand\": \"cat .github/dependabot.yml\", \"acceptanceCriteria\": [\"npm and github-actions ecosystems\", \"monthly schedule with one group each\"]}\n```",
       "blockedBy": [
         "11"
@@ -37,7 +37,7 @@
     {
       "id": 13,
       "subject": "Task 5: Write audit report, open and merge PR 1",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Standalone audit report committed; PR 1 (docs + CI hardening) merged with the new build check green.\n\n**Files:**\n- Create: docs/superpowers/audits/2026-07-12-security-audit.md\n\n**Acceptance Criteria:**\n- Report has all 9 findings with severity/evidence/disposition + clean checks\n- PR opened from docs/site-hardening-spec\n- build check green\n- PR merged (user confirms merge first)\n\n**Verify:** gh pr checks -> build pass; gh pr view --json state -> MERGED\n\n**Steps:** Report content verbatim in plan Task 5 Step 1. Commit 'docs: add security audit report'; push; gh pr create (body in plan); watch checks; user confirms; squash merge; back to main.\n\n```json:metadata\n{\"files\": [\"docs/superpowers/audits/2026-07-12-security-audit.md\"], \"verifyCommand\": \"gh pr view --json state -q .state\", \"acceptanceCriteria\": [\"report complete\", \"PR opened\", \"build check green\", \"merged after user confirmation\"]}\n```",
       "blockedBy": [
         "12"
@@ -46,7 +46,7 @@
     {
       "id": 14,
       "subject": "Task 6: Repo settings - Dependabot alerts and main ruleset",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Vulnerability alerts + security updates on; ruleset enforcing PR + green build on main, verified by a rejected direct push.\n\n**USER-ORDERED GATE - NON-SKIPPABLE.** This task was requested by the user in the current conversation. It MUST NOT be closed by walking around it, by declaring it 'verified inline', or by substituting a cheaper check. Close only after every item in acceptanceCriteria has been re-validated independently, with output captured.\n\n**Files:** none (GitHub settings via gh api)\n\n**Acceptance Criteria:**\n- vulnerability-alerts PUT -> 204\n- Ruleset main-protection active with deletion, non_fast_forward, pull_request, required_status_checks(build)\n- Direct push probe REJECTED with output captured\n- Probe commit removed locally\n\n**Verify:** probe push rejected; gh api rulesets lists main-protection active\n\n**Steps:** Exact commands + ruleset JSON + bypass contingency in plan Task 6.\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"gh api repos/{owner}/{repo}/rulesets -q '.[] | {name, enforcement}'\", \"acceptanceCriteria\": [\"alerts 204\", \"ruleset active with all four rules\", \"direct push rejected, output captured\", \"probe removed\"], \"userGate\": true, \"tags\": [\"user-gate\"], \"requireEvidenceTokens\": [[\"ruleset\", \"main-protection\", \"active\"], [\"rejected\", \"GH013\", \"rule violations\"]]}\n```",
       "blockedBy": [
         "13"
@@ -55,7 +55,7 @@
     {
       "id": 15,
       "subject": "Task 7: Fix JSON-LD escaping",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** A closing script tag in frontmatter can no longer break out of the JSON-LD block.\n\n**Files:**\n- Modify: src/components/JsonLd.astro\n\n**Acceptance Criteria:**\n- Rendered JSON-LD contains the unicode escape (backslash-u003c) instead of any literal '<'\n- Structured data still parses as JSON on a built page\n\n**Verify:** python check in plan Task 7 Step 3 prints OK\n\n**Steps:** First: git checkout main && git pull && git checkout -b feat/site-hardening. Then exact file content in plan Task 7 Step 2 (replace all '<' with the unicode escape before set:html). Commit 'security: escape < in JSON-LD output to prevent script breakout'.\n\n```json:metadata\n{\"files\": [\"src/components/JsonLd.astro\"], \"verifyCommand\": \"pnpm build && python check from plan Task 7 Step 3\", \"acceptanceCriteria\": [\"no literal < inside rendered JSON-LD payload\", \"JSON still parses on built page\"]}\n```",
       "blockedBy": [
         "14"
@@ -64,7 +64,7 @@
     {
       "id": 16,
       "subject": "Task 8: Self-host GoatCounter count.js",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** No third-party script origin; analytics still reports to GoatCounter.\n\n**Files:**\n- Create: public/js/count.js (vendored from gc.zgo.at)\n- Modify: src/layouts/Base.astro line 50\n\n**Acceptance Criteria:**\n- Vendored count.js current and non-empty\n- Base.astro loads /js/count.js same-origin with is:inline, async, unchanged data-goatcounter endpoint\n\n**Verify:** pnpm build && rg 'gc zgo at' dist/ -l -> no output; rg -c 'js/count.js' dist/index.html -> >=1\n\n**Steps:** curl -fsSL https://gc.zgo.at/count.js -o public/js/count.js; replace script tag per plan Task 8 Step 2. Commit 'security: self-host goatcounter count.js'.\n\n```json:metadata\n{\"files\": [\"public/js/count.js\", \"src/layouts/Base.astro\"], \"verifyCommand\": \"pnpm build && rg 'gc\\\\.zgo\\\\.at' dist/ -l; rg -c 'js/count.js' dist/index.html\", \"acceptanceCriteria\": [\"vendored count.js non-empty\", \"script loaded same-origin\", \"endpoint unchanged\"]}\n```",
       "blockedBy": [
         "15"
@@ -73,7 +73,7 @@
     {
       "id": 17,
       "subject": "Task 9: Meta-tag CSP + external stylesheets",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** CSP meta tag on every Base-layout page; Astro told never to inline stylesheets (which the CSP would block).\n\n**Files:**\n- Modify: src/layouts/Base.astro (after viewport meta)\n- Modify: astro.config.mjs\n\n**Acceptance Criteria:**\n- CSP meta in built HTML for all page types\n- build.inlineStylesheets 'never'; no style blocks in built HTML\n- Policy exactly as in plan Task 9 Step 1 (self + goatcounter endpoint in img/connect)\n\n**Verify:** pnpm build; CSP meta count 1 in dist/index.html; no '<style' matches\n\n**Steps:** Exact meta tag + config addition in plan Task 9. Runtime verification deferred to Task 13. Commit 'security: add meta CSP, disable stylesheet inlining'.\n\n```json:metadata\n{\"files\": [\"src/layouts/Base.astro\", \"astro.config.mjs\"], \"verifyCommand\": \"pnpm build && rg -c 'Content-Security-Policy' dist/index.html; rg -c '<style' dist/index.html || echo 'no inline styles'\", \"acceptanceCriteria\": [\"CSP meta in built HTML\", \"no inline style blocks\", \"policy exact\"]}\n```",
       "blockedBy": [
         "16"
@@ -82,7 +82,7 @@
     {
       "id": 18,
       "subject": "Task 10: 404 page",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Branded 404 served by GitHub Pages instead of the platform default.\n\n**Files:**\n- Create: src/pages/404.astro\n\n**Acceptance Criteria:**\n- dist/404.html built with Base layout\n- Links to home, essays, notes\n\n**Verify:** pnpm build && rg -c 'Page not found' dist/404.html -> >=1\n\n**Steps:** Exact content in plan Task 10 Step 1. Commit 'feat: add 404 page'.\n\n```json:metadata\n{\"files\": [\"src/pages/404.astro\"], \"verifyCommand\": \"pnpm build && rg -c 'Page not found' dist/404.html\", \"acceptanceCriteria\": [\"dist/404.html built with Base layout\", \"links to home, essays, notes\"]}\n```",
       "blockedBy": [
         "17"
@@ -91,8 +91,8 @@
     {
       "id": 19,
       "subject": "Task 11: security.txt and Bluesky atproto-did",
-      "status": "pending",
-      "description": "**Goal:** RFC 9116 security contact + Bluesky domain-handle verification file.\n\n**Files:**\n- Create: public/.well-known/security.txt\n- Create: public/.well-known/atproto-did\n\n**Acceptance Criteria:**\n- security.txt: Contact mailto:barrett@bryansoron.ca, Expires 2027-07-12T00:00:00.000Z, Canonical, Preferred-Languages en\n- atproto-did: user's DID, single line - MUST be obtained from the user at execution time (Bluesky app -> Settings -> Handle -> 'I have my own domain'). Never guess. If unavailable: ship security.txt only, note atproto-did deferred in PR body.\n- Both files in dist/.well-known/ after build\n\n**Verify:** pnpm build && cat dist/.well-known/security.txt dist/.well-known/atproto-did\n\n**Steps:** Exact security.txt in plan Task 11 Step 1. Commit 'feat: add security.txt and bluesky domain-handle verification'.\n\n```json:metadata\n{\"files\": [\"public/.well-known/security.txt\", \"public/.well-known/atproto-did\"], \"verifyCommand\": \"pnpm build && cat dist/.well-known/security.txt dist/.well-known/atproto-did\", \"acceptanceCriteria\": [\"security.txt complete\", \"atproto-did user-supplied or explicitly deferred\", \"both in dist\"]}\n```",
+      "status": "completed",
+      "description": "**Goal:** RFC 9116 security contact + Bluesky domain-handle verification file.\n\n**Files:**\n- Create: public/.well-known/security.txt\n- Create: public/.well-known/atproto-did\n\n**Acceptance Criteria:**\n- security.txt: Contact mailto:barrett@bryansoron.ca, Expires 2027-07-12T00:00:00.000Z, Canonical, Preferred-Languages en\n- DEFERRED by user 2026-07-13: atproto-did not shipped; security.txt only. Original: atproto-did: user's DID, single line - MUST be obtained from the user at execution time (Bluesky app -> Settings -> Handle -> 'I have my own domain'). Never guess. If unavailable: ship security.txt only, note atproto-did deferred in PR body.\n- Both files in dist/.well-known/ after build\n\n**Verify:** pnpm build && cat dist/.well-known/security.txt dist/.well-known/atproto-did\n\n**Steps:** Exact security.txt in plan Task 11 Step 1. Commit 'feat: add security.txt and bluesky domain-handle verification'.\n\n```json:metadata\n{\"files\": [\"public/.well-known/security.txt\", \"public/.well-known/atproto-did\"], \"verifyCommand\": \"pnpm build && cat dist/.well-known/security.txt dist/.well-known/atproto-did\", \"acceptanceCriteria\": [\"security.txt complete\", \"atproto-did user-supplied or explicitly deferred\", \"both in dist\"]}\n```",
       "blockedBy": [
         "18"
       ]
@@ -100,7 +100,7 @@
     {
       "id": 20,
       "subject": "Task 12: Sitemap filter and og:locale",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** /styleguide/ out of the sitemap; og:locale on every page.\n\n**Files:**\n- Modify: astro.config.mjs (sitemap filter)\n- Modify: src/layouts/Base.astro (og:locale after og:site_name)\n\n**Acceptance Criteria:**\n- Built sitemap has no /styleguide/ entry\n- og:locale en_CA in built HTML\n\n**Verify:** pnpm build; rg styleguide dist/sitemap-0.xml -> no match; rg -c 'og:locale' dist/index.html -> 1\n\n**Steps:** sitemap({ filter: (page) => !page.includes('/styleguide') }); add og:locale meta. Commit 'seo: filter styleguide from sitemap, add og:locale'.\n\n```json:metadata\n{\"files\": [\"astro.config.mjs\", \"src/layouts/Base.astro\"], \"verifyCommand\": \"pnpm build && (rg styleguide dist/sitemap-0.xml || echo 'styleguide absent') && rg -c 'og:locale' dist/index.html\", \"acceptanceCriteria\": [\"no styleguide in sitemap\", \"og:locale en_CA present\"]}\n```",
       "blockedBy": [
         "19"
@@ -109,7 +109,7 @@
     {
       "id": 21,
       "subject": "Task 13: Verify site PR end-to-end, merge, post-deploy checks",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Zero CSP violations across every page type before merge; live site verified after deploy.\n\n**USER-ORDERED GATE - NON-SKIPPABLE.** This task was requested by the user in the current conversation. It MUST NOT be closed by walking around it, by declaring it 'verified inline', or by substituting a cheaper check. Close only after every item in acceptanceCriteria has been re-validated independently, with output captured.\n\n**Files:** none (verification + PR bookkeeping)\n\n**Acceptance Criteria:**\n- pnpm preview on /, one essay, one note, /styleguide, a 404 URL, /newsletter: ZERO CSP console violations each, evidence captured\n- GoatCounter request observed (network tab) and dashboard pageview confirmed by user post-deploy\n- PR opened, build green, needs-visual-review label applied (expected), user visual review done, merged\n- Live: security.txt 200; sitemap without styleguide; branded 404; CSP meta on live pages\n\n**Verify:** all AC re-validated with captured output at close time\n\n**Steps:** Full commands in plan Task 13 (preview checks, gh pr create, user review + merge, deploy watch, live curls, user confirms GoatCounter + Bluesky handle switch).\n\n```json:metadata\n{\"files\": [], \"verifyCommand\": \"curl checks from plan Task 13 Step 4\", \"acceptanceCriteria\": [\"zero CSP violations locally, evidence captured\", \"GoatCounter observed + user-confirmed\", \"PR merged after green build and user visual review\", \"live checks pass\"], \"userGate\": true, \"tags\": [\"user-gate\"], \"requireEvidenceTokens\": [[\"preview\", \"localhost\", \"console\"], [\"live\", \"deploy\", \"barrett.bryansoron.ca\"]]}\n```",
       "blockedBy": [
         "20"
@@ -118,12 +118,12 @@
     {
       "id": 22,
       "subject": "Task 14: Link checker workflow",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Monthly lychee run over built HTML that upserts a single link-rot issue on failures.\n\n**Files:**\n- Create: .github/workflows/link-check.yml\n\n**Acceptance Criteria:**\n- Cron '17 9 3 * *' + workflow_dispatch\n- All actions SHA-pinned\n- Single-issue upsert via github-script with marker and link-rot label\n- One dispatch run completed and interpreted\n\n**Verify:** gh workflow run link-check.yml; gh run watch -> completes; failure path files/updates one issue\n\n**Steps:** Branch feat/link-checker; exact YAML in plan Task 14 Step 1; commit 'feat: add monthly link checker with issue upsert'; PR (user confirms merge); dispatch once. False positives -> --exclude patterns; dead links -> report to user.\n\n```json:metadata\n{\"files\": [\".github/workflows/link-check.yml\"], \"verifyCommand\": \"gh run list --workflow link-check.yml -L 1 --json status,conclusion\", \"acceptanceCriteria\": [\"monthly cron + dispatch\", \"all actions SHA-pinned\", \"single-issue upsert\", \"one dispatch run completed\"]}\n```",
       "blockedBy": [
         "21"
       ]
     }
   ],
-  "lastUpdated": "2026-07-12"
+  "lastUpdated": "2026-07-13T11:55:00Z"
 }
