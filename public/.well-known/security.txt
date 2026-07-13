@@ -1,0 +1,4 @@
+Contact: mailto:barrett@bryansoron.ca
+Expires: 2027-07-12T00:00:00.000Z
+Canonical: https://barrett.bryansoron.ca/.well-known/security.txt
+Preferred-Languages: en
