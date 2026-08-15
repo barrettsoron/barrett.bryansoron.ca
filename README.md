@@ -2,7 +2,7 @@
 
 Notes, essays, and working documents on durable political infrastructure and technology held to human terms.
 
-Static [Astro](https://astro.build/) build. Deployed to GitHub Pages from `main`. No analytics, no trackers, no cookies.
+Static [Astro](https://astro.build/) build. Deployed to GitHub Pages from `main`. No cookies, no cross-site tracking. Pageview counting via [GoatCounter](https://www.goatcounter.com/): the script is served from this domain and reports aggregate counts, nothing identifying.
 
 ## Local dev
 
