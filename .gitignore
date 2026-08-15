@@ -26,4 +26,5 @@ pnpm-debug.log*
 
 # local agent config — not for public repo
 .claude/
+.maestri/
 CLAUDE.md
