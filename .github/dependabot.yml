@@ -8,6 +8,12 @@ updates:
       npm-dependencies:
         patterns:
           - "*"
+    ignore:
+      # astro check cannot run on TypeScript 7 yet — the native compiler does not
+      # expose the programmatic API the Astro language server needs.
+      # Remove once https://github.com/withastro/roadmap/discussions/1321 lands.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
   - package-ecosystem: github-actions
     directory: /
     schedule:
