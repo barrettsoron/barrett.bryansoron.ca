@@ -26,9 +26,10 @@ const fmt = (d: Date) => d.toISOString().slice(0, 10);
 			<h2>Recent essays</h2>
 			<ul class="posts">
 				{essays.map((e) => (
-					<li>
+					<li class={e.data.draft ? 'is-draft' : undefined}>
 						<time datetime={fmt(e.data.date)}>{fmt(e.data.date)}</time>
 						<a href={`/essays/${e.id}`}>{e.data.title}</a>
+						{e.data.draft && <span class="badge-draft">Draft</span>}
 					</li>
 				))}
 			</ul>
@@ -40,9 +41,10 @@ const fmt = (d: Date) => d.toISOString().slice(0, 10);
 			<h2>Recent notes</h2>
 			<ul class="posts">
 				{notes.map((n) => (
-					<li>
+					<li class={n.data.draft ? 'is-draft' : undefined}>
 						<time datetime={fmt(n.data.date)}>{fmt(n.data.date)}</time>
 						<a href={`/notes/${n.id}`}>{n.data.title}</a>
+						{n.data.draft && <span class="badge-draft">Draft</span>}
 					</li>
 				))}
 			</ul>

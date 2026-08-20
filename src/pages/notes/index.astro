@@ -16,9 +16,10 @@ const fmt = (d: Date) => d.toISOString().slice(0, 10);
 	) : (
 		<ul class="posts posts--hanging">
 			{notes.map((n) => (
-				<li>
+				<li class={n.data.draft ? 'is-draft' : undefined}>
 					<time datetime={fmt(n.data.date)}>{fmt(n.data.date)}</time>
 					<a href={`/notes/${n.id}`}>{n.data.title}</a>
+					{n.data.draft && <span class="badge-draft">Draft</span>}
 				</li>
 			))}
 		</ul>
